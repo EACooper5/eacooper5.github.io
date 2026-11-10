@@ -20,8 +20,28 @@
 			.job ul { margin-bottom: 0; }
 			.job .when { font-style: italic; }
 			.career-intro { font-style: italic; font-size: 1.1em; color: #555555; margin-bottom: 2.5em; }
-			.tags { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; }
+			.tags-unused { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; }
 			.tags li { padding: 0.3em 0.9em; border: solid 1px #dddddd; border-radius: 999px; font-size: 0.85em; }
+			/* Skills */
+			.sk-group { font-size: 1.25em; margin: 0 0 1em 0; padding-bottom: 0.5em; border-bottom: solid 1px #dddddd; }
+			.sk-grid { display: grid; gap: 1.5em 2em; margin-bottom: 3em; }
+			.sk-grid.five { grid-template-columns: repeat(5, 1fr); }
+			.sk-grid.one { grid-template-columns: 1fr; }
+			.sk-grid.one ul { display: flex; flex-wrap: wrap; gap: 0.25em 2.5em; }
+			.sk-grid.two { grid-template-columns: 1fr 1fr; gap: 2em 3em; margin-bottom: 0; }
+			.sk-grid.three { grid-template-columns: repeat(3, 1fr); margin-bottom: 0; }
+			.sk-grid.two > div:last-child .sk-grid.three { grid-template-columns: repeat(2, 1fr); }
+			.sk-col h4 { font-size: 0.95em; margin: 0 0 0.15em 0; color: #555555; }
+			.sk-col .sk-sub { font-size: 0.8em; font-style: italic; color: #999999; margin: 0 0 0.6em 0; }
+			.sk-col ul { list-style: none; padding: 0; margin: 0.4em 0 0 0; }
+			.sk-col li { font-size: 0.9em; line-height: 1.5; padding: 0.2em 0; }
+			@media screen and (max-width: 1100px) {
+				.sk-grid.five { grid-template-columns: repeat(3, 1fr); }
+				.sk-grid.two { grid-template-columns: 1fr; }
+			}
+			@media screen and (max-width: 600px) {
+				.sk-grid.five, .sk-grid.three, .sk-grid.two > div:last-child .sk-grid.three { grid-template-columns: repeat(2, 1fr); }
+			}
 			/* Experience: heading with buttons on the right */
 			.section-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1em; }
 			.section-head header.major { margin-bottom: 1.5em; }
@@ -239,50 +259,140 @@
 								</div>
 							</section>
 
-						<!-- By the Numbers -->
-							<section id="skills" class="main special">
+						<!-- Skills -->
+							<section id="skills" class="main">
 								<header class="major">
 									<h2>Skills</h2>
-									<p>Retail operator turned product builder.</p>
 								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-truck"></span>
-										<strong>1,000+</strong> Suppliers migrated
-									</li>
-									<li class="style2">
-										<span class="icon solid fa-users"></span>
-										<strong>~40%</strong> Active users adopted
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-store"></span>
-										<strong>~99%</strong> New-store in-stock
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-code"></span>
-										<strong>~17 wks</strong> Eng capacity returned
-									</li>
-									<li class="style5">
-										<span class="icon solid fa-graduation-cap"></span>
-										<strong>500+</strong> Associates trained
-									</li>
-								</ul>
 
-								<h3>Product</h3>
-								<ul class="tags">
-									<li>Product Strategy &amp; Roadmaps</li><li>Go-to-Market</li><li>OKRs &amp; Adoption Metrics</li><li>Opportunity Sizing</li>
-									<li>Pilots &amp; A/B Testing</li><li>User Stories &amp; Acceptance Criteria</li><li>User Research</li><li>Executive Communication</li>
-								</ul>
-								<h3>AI &amp; Technical</h3>
-								<ul class="tags">
-									<li>Agentic Workflows</li><li>Claude (Skills, Code, Routines)</li><li>AI-Assisted Prototyping</li><li>Rules Engines</li>
-									<li>BigQuery / SQL</li><li>Data Models &amp; Integrations</li><li>Feature Flags</li><li>Component Libraries</li>
-								</ul>
-								<h3>Domain &amp; Tools</h3>
-								<ul class="tags">
-									<li>Assortment &amp; Space</li><li>Merchandising</li><li>Retail &amp; eCommerce</li>
-									<li>Figma</li><li>Jira &amp; Confluence</li><li>Tableau</li><li>Pendo</li><li>Microsoft Copilot</li>
-								</ul>
+								<h3 class="sk-group">Product</h3>
+								<div class="sk-grid five">
+									<div class="sk-col">
+										<h4>Discover</h4>
+										<p class="sk-sub">Understand the problem</p>
+										<ul>
+											<li>User research &amp; interviews</li>
+											<li>Workflow &amp; pain-point analysis</li>
+											<li>Opportunity sizing</li>
+											<li>Market &amp; competitive analysis</li>
+											<li>Data analysis</li>
+										</ul>
+									</div>
+									<div class="sk-col">
+										<h4>Define</h4>
+										<p class="sk-sub">Decide what to build</p>
+										<ul>
+											<li>Product strategy &amp; vision</li>
+											<li>Roadmaps</li>
+											<li>OKRs &amp; success metrics</li>
+											<li>Prioritization &amp; tradeoffs</li>
+											<li>User stories &amp; acceptance criteria</li>
+										</ul>
+									</div>
+									<div class="sk-col">
+										<h4>Design</h4>
+										<p class="sk-sub">Shape the solution</p>
+										<ul>
+											<li>Prototyping</li>
+											<li>Figma specs</li>
+											<li>User journeys</li>
+											<li>Partnering with UX</li>
+											<li>Component libraries</li>
+										</ul>
+									</div>
+									<div class="sk-col">
+										<h4>Develop</h4>
+										<p class="sk-sub">Build it with the team</p>
+										<ul>
+											<li>Agile / Scrum</li>
+											<li>Backlog management</li>
+											<li>Level-of-effort estimation</li>
+											<li>Data models &amp; integrations</li>
+											<li>Architecture tradeoffs</li>
+										</ul>
+									</div>
+									<div class="sk-col">
+										<h4>Deliver</h4>
+										<p class="sk-sub">Launch and drive adoption</p>
+										<ul>
+											<li>Pilots &amp; A/B testing</li>
+											<li>Feature flags &amp; phased rollouts</li>
+											<li>Go-to-market</li>
+											<li>Training &amp; change management</li>
+											<li>Adoption metrics</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="sk-grid one">
+									<div class="sk-col">
+										<h4>Across Every Stage</h4>
+										<ul>
+											<li>Stakeholder management</li>
+											<li>Cross-functional leadership</li>
+											<li>Executive communication</li>
+											<li>Vendor &amp; partner management</li>
+											<li>Risk &amp; compliance</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="sk-grid two">
+									<div>
+										<h3 class="sk-group">AI &amp; Technical</h3>
+										<div class="sk-grid three">
+									<div class="sk-col">
+										<h4>AI Tools</h4>
+										<ul>
+											<li>Claude (Skills, Code, Cowork)</li>
+											<li>Microsoft Copilot</li>
+											<li>Scheduled AI routines</li>
+											<li>Browser automation</li>
+										</ul>
+									</div>
+									<div class="sk-col">
+										<h4>AI Practice</h4>
+										<ul>
+											<li>AI-assisted prototyping</li>
+											<li>Rules engine design</li>
+											<li>Spec-driven development</li>
+											<li>Human review of AI outputs</li>
+										</ul>
+									</div>
+									<div class="sk-col">
+										<h4>Data</h4>
+										<ul>
+											<li>BigQuery / SQL</li>
+											<li>Tableau</li>
+											<li>Large-scale data analysis</li>
+										</ul>
+									</div>
+										</div>
+									</div>
+									<div>
+										<h3 class="sk-group">Domain &amp; Tools</h3>
+										<div class="sk-grid three">
+									<div class="sk-col">
+										<h4>Domain</h4>
+										<ul>
+											<li>Assortment &amp; space planning</li>
+											<li>Merchandising</li>
+											<li>Retail &amp; eCommerce</li>
+											<li>Store operations</li>
+										</ul>
+									</div>
+									<div class="sk-col">
+										<h4>Tools</h4>
+										<ul>
+											<li>Jira &amp; Confluence</li>
+											<li>Figma</li>
+											<li>Pendo</li>
+											<li>Microsoft Office</li>
+										</ul>
+									</div>
+										</div>
+									</div>
+								</div>
 							</section>
 
 						<!-- Contact -->
