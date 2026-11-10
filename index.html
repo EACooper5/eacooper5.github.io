@@ -40,6 +40,9 @@
 			.project-lead { font-style: italic; font-size: 1.05em; color: #555555; margin-bottom: 1.5em; }
 			.project-body h4 { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.08em; color: #4a4a4a; margin: 1.25em 0 0.35em 0; }
 			.project-body p { margin-bottom: 0.75em; }
+			.project-points { margin: 0 0 0.75em 0; padding-left: 1.1em; }
+			.project-points li { margin-bottom: 0.6em; }
+			.project-points b { color: #4a4a4a; font-weight: 700 !important; }
 			@media screen and (max-width: 900px) {
 				.project, .project.flip { grid-template-columns: 1fr; gap: 1.5em; }
 				.project.flip .project-visual { order: 0; }
@@ -200,22 +203,29 @@
 
 								<article class="project">
 									<div class="project-visual" style="background: linear-gradient(135deg, #efa8b0, #c79cc8);">
-										<span class="icon solid fa-life-ring"></span>
+										<span class="icon solid fa-robot"></span>
 										<ul class="project-stats">
-											<li><strong>500+</strong><span>associates trained</span></li>
-											<li><strong>3+</strong><span>cohorts onboarded each year</span></li>
+											<li><strong>Billions</strong><span>of rows analyzed across 9 enterprise systems</span></li>
+											<li><strong>~95</strong><span>rules drafted with AI</span></li>
+											<li><strong>&ge;90%</strong><span>of recommendations approved as-is (target)</span></li>
 										</ul>
 									</div>
 									<div class="project-body">
-										<span class="eyebrow">Senior Business Analyst &bull; The Home Depot</span>
-										<h3>Merchandising Support Hub</h3>
-										<p class="project-lead">One place for merchandising teams to find tool resources, training, and support.</p>
+										<span class="eyebrow">Product Manager &bull; The Home Depot &bull; In pilot</span>
+										<h3>Merchandise Planner Execution</h3>
+										<p class="project-lead">Turning a full day of manual reconciliation into one plain-language recommendation a planner can approve.</p>
 										<h4>The problem</h4>
-										<p>Resources for merchandising tools were scattered, which made it hard for associates to find answers, learn new workflows, and adopt the tools they relied on.</p>
+										<p>Merchandise planners keep store assortments aligned across three sources: what the store is told to set, what downstream systems are told, and what the merchant says the store should carry. When those disagree, planners reconcile them by hand. A single case can take a full day, and the rules for resolving it live in people&rsquo;s heads, with a learning curve of about two years.</p>
 										<h4>What I did</h4>
-										<p>I built a centralized enablement and support hub and paired it with structured onboarding for new cohorts. I also led the organization&rsquo;s first standardized year-end planning training, delivered across five enterprise-wide sessions.</p>
-										<h4>The impact</h4>
-										<p>Easier access to resources and stronger tool adoption across merchandising, plus a repeatable onboarding and training model for each new group.</p>
+										<ul class="project-points">
+											<li><b>Tested the assumption first.</b> Leadership believed store reset projects were the biggest problem. Using BigQuery, SQL, and Claude, I analyzed billions of rows across nine enterprise systems and found that most misalignment builds up in everyday maintenance, outside reset projects entirely.</li>
+											<li><b>Reset the strategy.</b> We prioritized everyday alignment, which is fully within our team&rsquo;s control, has fewer dependencies, and has enough volume to validate rules weekly. We chose drops, the largest source of misalignment and the one where quality was declining, as the first pilot.</li>
+											<li><b>Prototyped the workflow with AI.</b> AI profiled the data and drafted about 95 rules, and I prototyped the user journeys and a rules engine that gives the same answer for the same facts every time. Planners get one recommendation per case to approve, adjust, or dismiss. Approved actions run automatically, and planner feedback improves the rules.</li>
+										</ul>
+										<h4>Responsible AI</h4>
+										<p>I validate AI outputs before they reach users: re-running key figures directly in BigQuery, having engineers check rules against historical data, and keeping rules in draft until planners weigh in. That process caught an AI-generated metric that treated &ldquo;every system agrees a store shouldn&rsquo;t carry this item&rdquo; as less valid than &ldquo;every system agrees it should,&rdquo; which would have distorted both our reporting and the rules.</p>
+										<h4>Where it stands</h4>
+										<p>A pilot with a dozen super-user planners across 16 product classes is underway, with the first phase delivering in early 2027. Success means fewer misaligned records, less planner time per case, and at least 90% of recommendations approved as-is.</p>
 									</div>
 								</article>
 
@@ -223,44 +233,53 @@
 									<div class="project-visual" style="background: linear-gradient(135deg, #c79cc8, #9bb2e1);">
 										<span class="icon solid fa-layer-group"></span>
 										<ul class="project-stats">
-											<li><strong>~40%</strong><span>of active users adopted in two quarters</span></li>
-											<li><strong>Omnichannel</strong><span>one view across stores and eCommerce</span></li>
+											<li><strong>~40%</strong><span>of active users adopted within two quarters</span></li>
+											<li><strong>1 view</strong><span>of assortment across stores and eCommerce</span></li>
+											<li><strong>Every</strong><span>new feature now builds on it</span></li>
 										</ul>
 									</div>
 									<div class="project-body">
 										<span class="eyebrow">Product Manager &bull; The Home Depot</span>
 										<h3>Interconnected Experience</h3>
-										<p class="project-lead">A brand-new cross-channel view of a product&rsquo;s assortment across every selling channel.</p>
+										<p class="project-lead">A brand-new cross-channel view of a product&rsquo;s assortment across stores and eCommerce.</p>
 										<h4>The problem</h4>
-										<p>Merchants managed store and eCommerce assortments in separate experiences and had been asking for a single view of where a product is carried across channels.</p>
+										<p>Merchants managed store and eCommerce assortments in separate experiences and had been asking for a single view of where a product is carried across every selling channel.</p>
 										<h4>What I did</h4>
-										<p>I proposed and led the experience, framing the vision around one source of truth for assortment across channels. Starting from user research and support data, I partnered with engineering on a data grid built for scale and a backend that could handle much higher volume, laying the foundation to retire a legacy system. We smoke-tested with real support cases, launched behind feature flags with pilot and control groups, and rolled out in phases with user forums and workflow-specific training.</p>
+										<ul class="project-points">
+											<li><b>Set the vision.</b> I proposed and led the experience, framing it around the company&rsquo;s omnichannel strategy: one source of truth for assortment across channels.</li>
+											<li><b>Built for scale.</b> Starting from user research and support data, I explored new ways to display data and complete key tasks at scale, which led to our investment in AG Grid. With engineering, we enhanced our new backend to handle much higher transaction and change volumes, laying the foundation to retire the legacy backend.</li>
+											<li><b>Launched carefully.</b> We smoke-tested with real support cases, released behind feature flags with pilot and control groups, and expanded in phases. I hosted user forums, created training materials, and walked users through the workflows they use every day.</li>
+										</ul>
+										<h4>The challenge</h4>
+										<p>The new experience replaced an existing capability, and leadership was concerned about disruption. I used user research, adoption data, and the phased rollout to build confidence and drive adoption.</p>
 										<h4>The impact</h4>
-										<p>About 40% of active users adopted it within two quarters, and it is now the foundation for every new feature we build. It replaced an existing capability, so I used research, adoption data, and the phased rollout to build leadership&rsquo;s confidence.</p>
+										<p>About 40% of active users adopted it within two quarters. Today it is the foundation for every new feature we build to help users work faster and at scale.</p>
 									</div>
 								</article>
 
 								<article class="project">
 									<div class="project-visual" style="background: linear-gradient(135deg, #9bb2e1, #8cc9f0);">
-										<span class="icon solid fa-robot"></span>
+										<span class="icon solid fa-life-ring"></span>
 										<ul class="project-stats">
-											<li><strong>Billions</strong><span>of rows analyzed across 9 systems</span></li>
-											<li><strong>~95</strong><span>rules drafted with AI</span></li>
-											<li><strong>&ge;90%</strong><span>approval target</span></li>
+											<li><strong>500+</strong><span>merchandising associates trained</span></li>
+											<li><strong>3+</strong><span>onboarding cohorts each year</span></li>
+											<li><strong>1</strong><span>one-stop shop for the merchant team</span></li>
 										</ul>
 									</div>
 									<div class="project-body">
-										<span class="eyebrow">Product Manager &bull; The Home Depot</span>
-										<h3>Merchandise Planner Agentic Workflow</h3>
-										<p class="project-lead">Turning a day of manual reconciliation into one plain-language recommendation a planner can approve.</p>
+										<span class="eyebrow">Senior Business Analyst &bull; The Home Depot</span>
+										<h3>Merchandising Support Hub</h3>
+										<p class="project-lead">A one-stop shop for training, support, and development resources for the entire merchant team.</p>
 										<h4>The problem</h4>
-										<p>Merchandise planners reconcile assortment data across several systems by hand. A single case can take a full day, and the rules for resolving it live in people&rsquo;s heads, with a learning curve of about two years.</p>
+										<p>Merchants, associate merchants, and merchandise planners depend on a wide set of tools and processes, but the training, support, and development resources behind them were scattered. That made it harder to find answers, ramp up new team members, and get full value from the tools.</p>
 										<h4>What I did</h4>
-										<p>Leadership assumed store reset projects were the biggest problem. Before committing, I tested that with data, analyzing billions of rows across nine systems with BigQuery, SQL, and Claude. Most misalignment turned out to build up outside reset projects, so we shifted to everyday alignment and chose drops, the largest source, as the first pilot. I prototyped the user journeys and a rules engine with AI tools: AI profiled the data and drafted about 95 rules, and the engine gives the same answer for the same facts every time. Planners approve, adjust, or dismiss each recommendation, approved actions run automatically, and their feedback improves the rules.</p>
-										<h4>Responsible AI</h4>
-										<p>I validate AI outputs before they reach users: re-running key figures in BigQuery, having engineers check rules against history, and keeping rules in draft until planners weigh in. That process caught a flawed AI-generated metric before it skewed our reporting.</p>
-										<h4>Where it stands</h4>
-										<p>A pilot with a dozen super-user planners is underway, with the first phase delivering in early 2027. Success means fewer misaligned records, less planner time per case, and at least 90% of recommendations approved as-is.</p>
+										<ul class="project-points">
+											<li><b>Built the one-stop shop.</b> I architected and managed a central hub for all training, support, and development resources, serving merchants, associate merchants, and merchandise planners.</li>
+											<li><b>Brought it to the teams.</b> I attended department meetings to show merchant teams what was available and to gather feedback that shaped what the hub offered next.</li>
+											<li><b>Made onboarding and training repeatable.</b> I onboarded 3+ cohorts each year of 10&ndash;22 associates each, and led the organization&rsquo;s first standardized year-end planning training for 500+ merchandising associates across five enterprise-wide sessions.</li>
+										</ul>
+										<h4>The impact</h4>
+										<p>Merchant teams gained one reliable place to find answers and learn their tools, which improved access to resources and tool adoption, and every new cohort started from the same foundation.</p>
 									</div>
 								</article>
 							</section>
