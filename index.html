@@ -22,6 +22,30 @@
 			.career-intro { font-style: italic; font-size: 1.1em; color: #555555; margin-bottom: 2.5em; }
 			.tags-unused { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; }
 			.tags li { padding: 0.3em 0.9em; border: solid 1px #dddddd; border-radius: 999px; font-size: 0.85em; }
+			/* My Projects: alternating sections */
+			.project { display: grid; grid-template-columns: 2fr 3fr; gap: 3em; align-items: start; padding: 3em 0; border-top: solid 1px #eeeeee; }
+			.project:first-of-type { border-top: 0; padding-top: 0.5em; }
+			.project.flip { grid-template-columns: 3fr 2fr; }
+			.project.flip .project-visual { order: 2; }
+			.project-visual { border-radius: 0.75em; color: #ffffff; padding: 2.5em 2em; text-align: center; position: sticky; top: 6em; }
+			.project-visual > .icon { display: inline-flex; align-items: center; justify-content: center; width: 4.5em; height: 4.5em; border-radius: 50%; background: rgba(255,255,255,0.25); font-size: 1.6em; margin-bottom: 0.9em; }
+			.project-visual > .icon:before { line-height: 1; font-size: 1.5em; }
+			.project-visual, .project-visual span { color: #ffffff; }
+			.project-stats { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.9em; }
+			.project-stats li { background: rgba(255,255,255,0.18); border-radius: 0.5em; padding: 0.7em 0.8em; }
+			.project-stats strong { display: block; color: #ffffff !important; font-size: 1.5em; line-height: 1.2; font-weight: 300; }
+			.project-stats span { display: block; font-size: 0.8em; line-height: 1.4; opacity: 0.95; }
+			.project-body .eyebrow { display: block; font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: #a89cc8; margin-bottom: 0.4em; }
+			.project-body h3 { font-size: 1.6em; margin-bottom: 0.4em; }
+			.project-lead { font-style: italic; font-size: 1.05em; color: #555555; margin-bottom: 1.5em; }
+			.project-body h4 { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.08em; color: #4a4a4a; margin: 1.25em 0 0.35em 0; }
+			.project-body p { margin-bottom: 0.75em; }
+			@media screen and (max-width: 900px) {
+				.project, .project.flip { grid-template-columns: 1fr; gap: 1.5em; }
+				.project.flip .project-visual { order: 0; }
+				.project-visual { position: static; padding: 1.75em 1.25em; }
+				.project-stats { grid-template-columns: repeat(auto-fit, minmax(8em, 1fr)); }
+			}
 			/* Skills */
 			.sk-group { font-size: 1.25em; margin: 0 0 1em 0; padding-bottom: 0.5em; border-bottom: solid 1px #dddddd; }
 			.sk-grid { display: grid; gap: 1.5em 2em; margin-bottom: 3em; }
@@ -169,36 +193,76 @@
 							</section>
 
 						<!-- My Projects -->
-							<section id="work" class="main special">
+							<section id="work" class="main">
 								<header class="major">
 									<h2>My Projects</h2>
-									<p>Recent products from Merchandising Product &ndash; Assortment &amp; Space at The Home Depot.</p>
 								</header>
-								<ul class="features">
-									<li>
-										<span class="icon solid major style1 fa-robot"></span>
-										<h3>Agentic Workflows</h3>
-										<p>An AI-assisted capability that helps merchandise planners fix assortment data that doesn't match
-										across systems. I used data to size the opportunity and pick where to start, prototyped the user
-										journeys and a rules engine with AI tools, and review AI outputs before they reach users.</p>
-										<span class="result">Billions of rows analyzed to choose the first pilot</span>
-									</li>
-									<li>
-										<span class="icon solid major style3 fa-layer-group"></span>
-										<h3>Cross-Channel Assortment</h3>
-										<p>I proposed and led a brand-new view of a product's assortment
-										across stores and eCommerce in one place. We launched behind feature flags with pilot and control
-										groups, then rolled out in phases.</p>
-										<span class="result">~40% of active users in two quarters</span>
-									</li>
-									<li>
-										<span class="icon solid major style5 fa-database"></span>
-										<h3>Assortment Platform</h3>
-										<p>I own the internal assortment platform and its source-of-truth data. I led supplier scalability,
-										multi-unit-of-measure controls, and new-store automation, and moved users onto each new experience.</p>
-										<span class="result">1,000+ suppliers migrated</span>
-									</li>
-								</ul>
+
+								<article class="project">
+									<div class="project-visual" style="background: linear-gradient(135deg, #efa8b0, #c79cc8);">
+										<span class="icon solid fa-life-ring"></span>
+										<ul class="project-stats">
+											<li><strong>500+</strong><span>associates trained</span></li>
+											<li><strong>3+</strong><span>cohorts onboarded each year</span></li>
+										</ul>
+									</div>
+									<div class="project-body">
+										<span class="eyebrow">Senior Business Analyst &bull; The Home Depot</span>
+										<h3>Merchandising Support Hub</h3>
+										<p class="project-lead">One place for merchandising teams to find tool resources, training, and support.</p>
+										<h4>The problem</h4>
+										<p>Resources for merchandising tools were scattered, which made it hard for associates to find answers, learn new workflows, and adopt the tools they relied on.</p>
+										<h4>What I did</h4>
+										<p>I built a centralized enablement and support hub and paired it with structured onboarding for new cohorts. I also led the organization&rsquo;s first standardized year-end planning training, delivered across five enterprise-wide sessions.</p>
+										<h4>The impact</h4>
+										<p>Easier access to resources and stronger tool adoption across merchandising, plus a repeatable onboarding and training model for each new group.</p>
+									</div>
+								</article>
+
+								<article class="project flip">
+									<div class="project-visual" style="background: linear-gradient(135deg, #c79cc8, #9bb2e1);">
+										<span class="icon solid fa-layer-group"></span>
+										<ul class="project-stats">
+											<li><strong>~40%</strong><span>of active users adopted in two quarters</span></li>
+											<li><strong>Omnichannel</strong><span>one view across stores and eCommerce</span></li>
+										</ul>
+									</div>
+									<div class="project-body">
+										<span class="eyebrow">Product Manager &bull; The Home Depot</span>
+										<h3>Interconnected Experience</h3>
+										<p class="project-lead">A brand-new cross-channel view of a product&rsquo;s assortment across every selling channel.</p>
+										<h4>The problem</h4>
+										<p>Merchants managed store and eCommerce assortments in separate experiences and had been asking for a single view of where a product is carried across channels.</p>
+										<h4>What I did</h4>
+										<p>I proposed and led the experience, framing the vision around one source of truth for assortment across channels. Starting from user research and support data, I partnered with engineering on a data grid built for scale and a backend that could handle much higher volume, laying the foundation to retire a legacy system. We smoke-tested with real support cases, launched behind feature flags with pilot and control groups, and rolled out in phases with user forums and workflow-specific training.</p>
+										<h4>The impact</h4>
+										<p>About 40% of active users adopted it within two quarters, and it is now the foundation for every new feature we build. It replaced an existing capability, so I used research, adoption data, and the phased rollout to build leadership&rsquo;s confidence.</p>
+									</div>
+								</article>
+
+								<article class="project">
+									<div class="project-visual" style="background: linear-gradient(135deg, #9bb2e1, #8cc9f0);">
+										<span class="icon solid fa-robot"></span>
+										<ul class="project-stats">
+											<li><strong>Billions</strong><span>of rows analyzed across 9 systems</span></li>
+											<li><strong>~95</strong><span>rules drafted with AI</span></li>
+											<li><strong>&ge;90%</strong><span>approval target</span></li>
+										</ul>
+									</div>
+									<div class="project-body">
+										<span class="eyebrow">Product Manager &bull; The Home Depot</span>
+										<h3>Merchandise Planner Agentic Workflow</h3>
+										<p class="project-lead">Turning a day of manual reconciliation into one plain-language recommendation a planner can approve.</p>
+										<h4>The problem</h4>
+										<p>Merchandise planners reconcile assortment data across several systems by hand. A single case can take a full day, and the rules for resolving it live in people&rsquo;s heads, with a learning curve of about two years.</p>
+										<h4>What I did</h4>
+										<p>Leadership assumed store reset projects were the biggest problem. Before committing, I tested that with data, analyzing billions of rows across nine systems with BigQuery, SQL, and Claude. Most misalignment turned out to build up outside reset projects, so we shifted to everyday alignment and chose drops, the largest source, as the first pilot. I prototyped the user journeys and a rules engine with AI tools: AI profiled the data and drafted about 95 rules, and the engine gives the same answer for the same facts every time. Planners approve, adjust, or dismiss each recommendation, approved actions run automatically, and their feedback improves the rules.</p>
+										<h4>Responsible AI</h4>
+										<p>I validate AI outputs before they reach users: re-running key figures in BigQuery, having engineers check rules against history, and keeping rules in draft until planners weigh in. That process caught a flawed AI-generated metric before it skewed our reporting.</p>
+										<h4>Where it stands</h4>
+										<p>A pilot with a dozen super-user planners is underway, with the first phase delivering in early 2027. Success means fewer misaligned records, less planner time per case, and at least 90% of recommendations approved as-is.</p>
+									</div>
+								</article>
 							</section>
 
 						<!-- Experience -->
