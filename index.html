@@ -21,6 +21,17 @@
 			.tags { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; }
 			.tags li { padding: 0.3em 0.9em; border: solid 1px #dddddd; border-radius: 999px; font-size: 0.85em; }
 			.spotlight .image img { border-radius: 100%; }
+			/* Landing straight on the main panel (no banner) */
+			#wrapper { padding-top: 4em; }
+			#footer { padding: 2.5em 0 3em 0; }
+			@media screen and (max-width: 736px) {
+				#wrapper { padding-top: 1.5em; }
+				#nav { display: block !important; position: relative; width: 100%; max-width: 100%; height: auto; padding: 0.5em; border-radius: 0.25em 0.25em 0 0; }
+				#nav + #main { border-top-left-radius: 0; border-top-right-radius: 0; }
+				#nav ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25em; }
+				#nav ul li { margin: 0; padding: 0; }
+				#nav ul li a { font-size: 0.85em; padding: 0 0.7em; height: 2.4em; line-height: 2.4em; }
+			}
 			.features li .result { display: block; margin-top: 0.75em; font-weight: 600; color: #636363; }
 		</style>
 	</head>
@@ -29,18 +40,10 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Elizabeth A. Cooper</h1>
-						<p>Product Manager &bull; Atlanta, GA<br />
-						Building AI-powered tools for retail merchandising.</p>
-					</header>
-
 				<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li><a href="#intro" class="active">About</a></li>
+							<li><a href="#intro" class="active">About Me</a></li>
 							<li><a href="#work">What I Build</a></li>
 							<li><a href="#experience">Experience</a></li>
 							<li><a href="#skills">Skills</a></li>
@@ -228,28 +231,6 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<section>
-							<h2>In my free time, I'm usually…</h2>
-							<ul>
-								<li>Planning my next trip (I'm a self-described hodophile)</li>
-								<li>Reading, catching live music, or wandering a museum</li>
-								<li>At a group fitness class</li>
-								<li>Happiest at home with my cat, Hello Kitty</li>
-							</ul>
-						</section>
-						<section>
-							<h2>Find Me</h2>
-							<dl class="alt">
-								<dt>Location</dt>
-								<dd>Atlanta, GA</dd>
-								<dt>Email</dt>
-								<dd><a href="mailto:cooper.elizabetha@gmail.com">cooper.elizabetha@gmail.com</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="icon brands fa-linkedin-in alt"><span class="label">LinkedIn</span></a></li>
-								<li><a href="mailto:cooper.elizabetha@gmail.com" class="icon solid fa-envelope alt"><span class="label">Email</span></a></li>
-							</ul>
-						</section>
 						<p class="copyright">&copy; 2026 Elizabeth A. Cooper. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
 
