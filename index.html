@@ -35,6 +35,20 @@
 			.sk-col .sk-sub { font-size: 0.8em; font-style: italic; color: #999999; margin: 0 0 0.6em 0; }
 			.sk-col ul { list-style: none; padding: 0; margin: 0.4em 0 0 0; }
 			.sk-col li { font-size: 0.9em; line-height: 1.5; padding: 0.2em 0; }
+			/* Skills: icons and cards */
+			.sk-col.c1 { --c: #efa8b0; } .sk-col.c2 { --c: #c79cc8; } .sk-col.c3 { --c: #a89cc8; } .sk-col.c4 { --c: #9bb2e1; } .sk-col.c5 { --c: #8cc9f0; }
+			.sk-group { display: flex; align-items: center; gap: 0.6em; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.95em !important; font-weight: 700; color: #636363; }
+			.sk-group .icon { color: #a89cc8; font-size: 1.1em; }
+			.sk-grid.cards .sk-col { background: #fafafa; border: solid 1px #eeeeee; border-top: solid 4px var(--c); border-radius: 0.5em; padding: 1.25em 1.1em 1em; }
+			.sk-col h4 { display: flex; align-items: center; gap: 0.6em; font-size: 1em !important; font-weight: 700; color: #4a4a4a !important; }
+			.sk-badge { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 2em; height: 2em; border-radius: 50%; background: var(--c, #a89cc8); color: #ffffff; font-size: 0.85em; }
+			.sk-badge:before { line-height: 1; }
+			.sk-col .sk-sub { margin-top: 0.5em !important; }
+			.sk-col li { position: relative; padding-left: 0.9em !important; }
+			.sk-col li:before { content: ""; position: absolute; left: 0; top: 0.8em; width: 0.35em; height: 0.35em; border-radius: 50%; background: var(--c, #cccccc); }
+			.sk-grid.one .sk-col h4 { margin-bottom: 0.25em; }
+			.sk-grid.cards { gap: 1em; }
+			.sk-grid.five.cards .sk-col { padding: 1.1em 0.9em 0.9em; }
 			@media screen and (max-width: 1100px) {
 				.sk-grid.five { grid-template-columns: repeat(3, 1fr); }
 				.sk-grid.two { grid-template-columns: 1fr; }
@@ -265,10 +279,10 @@
 									<h2>Skills</h2>
 								</header>
 
-								<h3 class="sk-group">Product</h3>
-								<div class="sk-grid five">
-									<div class="sk-col">
-										<h4>Discover</h4>
+								<h3 class="sk-group"><span class="icon solid fa-cubes"></span>Product</h3>
+								<div class="sk-grid five cards">
+									<div class="sk-col c1">
+										<h4><span class="sk-badge icon solid fa-search"></span>Discover</h4>
 										<p class="sk-sub">Understand the problem</p>
 										<ul>
 											<li>User research &amp; interviews</li>
@@ -278,8 +292,8 @@
 											<li>Data analysis</li>
 										</ul>
 									</div>
-									<div class="sk-col">
-										<h4>Define</h4>
+									<div class="sk-col c2">
+										<h4><span class="sk-badge icon solid fa-bullseye"></span>Define</h4>
 										<p class="sk-sub">Decide what to build</p>
 										<ul>
 											<li>Product strategy &amp; vision</li>
@@ -289,8 +303,8 @@
 											<li>User stories &amp; acceptance criteria</li>
 										</ul>
 									</div>
-									<div class="sk-col">
-										<h4>Design</h4>
+									<div class="sk-col c3">
+										<h4><span class="sk-badge icon solid fa-pencil-ruler"></span>Design</h4>
 										<p class="sk-sub">Shape the solution</p>
 										<ul>
 											<li>Prototyping</li>
@@ -300,8 +314,8 @@
 											<li>Component libraries</li>
 										</ul>
 									</div>
-									<div class="sk-col">
-										<h4>Develop</h4>
+									<div class="sk-col c4">
+										<h4><span class="sk-badge icon solid fa-code"></span>Develop</h4>
 										<p class="sk-sub">Build it with the team</p>
 										<ul>
 											<li>Agile / Scrum</li>
@@ -311,8 +325,8 @@
 											<li>Architecture tradeoffs</li>
 										</ul>
 									</div>
-									<div class="sk-col">
-										<h4>Deliver</h4>
+									<div class="sk-col c5">
+										<h4><span class="sk-badge icon solid fa-rocket"></span>Deliver</h4>
 										<p class="sk-sub">Launch and drive adoption</p>
 										<ul>
 											<li>Pilots &amp; A/B testing</li>
@@ -325,8 +339,8 @@
 								</div>
 
 								<div class="sk-grid one">
-									<div class="sk-col">
-										<h4>Across Every Stage</h4>
+									<div class="sk-col c3">
+										<h4><span class="sk-badge icon solid fa-hands-helping"></span>Across Every Stage</h4>
 										<ul>
 											<li>Stakeholder management</li>
 											<li>Cross-functional leadership</li>
@@ -337,10 +351,10 @@
 									</div>
 								</div>
 
-								<h3 class="sk-group">AI &amp; Technical</h3>
-								<div class="sk-grid three">
-									<div class="sk-col">
-										<h4>AI Tools</h4>
+								<h3 class="sk-group"><span class="icon solid fa-microchip"></span>AI &amp; Technical</h3>
+								<div class="sk-grid three cards">
+									<div class="sk-col c2">
+										<h4><span class="sk-badge icon solid fa-robot"></span>AI Tools</h4>
 										<ul>
 											<li>Claude (Skills, Code, Cowork)</li>
 											<li>Microsoft Copilot</li>
@@ -348,8 +362,8 @@
 											<li>Browser automation</li>
 										</ul>
 									</div>
-									<div class="sk-col">
-										<h4>AI Practice</h4>
+									<div class="sk-col c4">
+										<h4><span class="sk-badge icon solid fa-lightbulb"></span>AI Practice</h4>
 										<ul>
 											<li>AI-assisted prototyping</li>
 											<li>Rules engine design</li>
@@ -357,8 +371,8 @@
 											<li>Responsible AI / AI output validation</li>
 										</ul>
 									</div>
-									<div class="sk-col">
-										<h4>Data</h4>
+									<div class="sk-col c5">
+										<h4><span class="sk-badge icon solid fa-database"></span>Data</h4>
 										<ul>
 											<li>BigQuery / SQL</li>
 											<li>Tableau</li>
@@ -367,7 +381,7 @@
 									</div>
 								</div>
 
-								<h3 class="sk-group">Tools</h3>
+								<h3 class="sk-group"><span class="icon solid fa-toolbox"></span>Tools</h3>
 								<div class="sk-grid one">
 									<div class="sk-col">
 										<ul>
