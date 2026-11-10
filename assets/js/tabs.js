@@ -33,5 +33,10 @@
 		$(window).on('hashchange', function() { show(location.hash.slice(1), true); });
 
 		show(location.hash.slice(1), false);
+
+		// Opening a shared link (e.g. #experience) shouldn't jump down the page.
+		if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+		$(window).on('load', function() { setTimeout(function() { window.scrollTo(0, 0); }, 0); });
+		window.scrollTo(0, 0);
 	});
 })(jQuery);

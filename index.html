@@ -20,6 +20,20 @@
 			.job ul { margin-bottom: 0; }
 			.tags { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; }
 			.tags li { padding: 0.3em 0.9em; border: solid 1px #dddddd; border-radius: 999px; font-size: 0.85em; }
+			/* Experience: heading with buttons on the right */
+			.section-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1em; }
+			.section-head header.major { margin-bottom: 2.5em; }
+			.section-head .actions { margin: 0.4em 0 0 0; }
+			.section-head .actions li { padding-left: 0.75em; }
+			@media screen and (max-width: 736px) {
+				.section-head { flex-direction: column; gap: 0; margin-bottom: 2em; }
+				.section-head header.major { margin-bottom: 1.25em; }
+				.section-head .actions { display: flex; flex-direction: row; width: auto; margin: 0; }
+				.section-head .actions li { display: inline-block; width: auto; padding: 0 0.75em 0 0; }
+				.section-head .actions li:first-child { padding-top: 0; }
+				.section-head .actions .button { width: auto; }
+			}
+			.education-head { margin-top: 3.5em; padding-top: 3em; border-top: solid 1px #dddddd; }
 			/* About Me: photos sit inside the text */
 			.about .photo { width: 36%; max-width: 320px; border-radius: 0.5em; box-shadow: 0 4px 18px rgba(0,0,0,0.12); margin-bottom: 1.25em; }
 			.about .photo.right { float: right; margin-left: 2.5em; margin-top: 0.25em; }
@@ -152,20 +166,23 @@
 
 						<!-- Experience -->
 							<section id="experience" class="main">
-								<header class="major">
-									<h2>Experience</h2>
-								</header>
+								<div class="section-head">
+									<header class="major">
+										<h2>Experience</h2>
+									</header>
+									<ul class="actions small">
+										<li><a href="resume.pdf" class="button primary small icon solid fa-file-alt" target="_blank">Resume</a></li>
+										<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
+									</ul>
+								</div>
 
 								<div class="job">
 									<h3>Product Manager &bull; The Home Depot</h3>
 									<span class="when">Sep 2024 – Present &bull; Merchandising Product, Assortment &amp; Space</span>
 									<ul>
-										<li>Own strategy, roadmap, OKRs, and go-to-market for every initiative, and track adoption after launch.</li>
-										<li>Run pilots with control groups and A/B tests, and use feature flags to roll out new capabilities safely.</li>
-										<li>Partner with engineering on data models, integrations, architecture tradeoffs, and sequencing.</li>
-										<li>Migrated 1,000+ suppliers, supporting $15M+ in online sales, through four supplier scalability releases.</li>
-										<li>Returned ~17 weeks of engineering capacity by automating regional assortment setup for new stores.</li>
-										<li>Present monthly demos to the CTO and senior leadership; have led balanced teams of 10+ engineers.</li>
+										<li>Own strategy, roadmap, OKRs, and go-to-market for AI-powered assortment and space products, including brand-new agentic workflows, with a 6-person team across engineering, AI, UX, and data science.</li>
+										<li>Launched a brand-new cross-channel assortment experience adopted by ~40% of active users within two quarters, using pilots, control groups, and phased rollouts.</li>
+										<li>Migrated 1,000+ suppliers supporting $15M+ in online sales, and returned ~17 weeks of engineering capacity by automating new-store assortment setup.</li>
 									</ul>
 								</div>
 
@@ -173,7 +190,7 @@
 									<h3>Senior Business Analyst &bull; The Home Depot</h3>
 									<span class="when">Jun 2022 – Sep 2024 &bull; Merchandise Management Systems</span>
 									<ul>
-										<li>Turned user workflows and pain points into requirements with Product and Merchant teams.</li>
+										<li>Turned user workflows and pain points into product requirements with Product and Merchant teams.</li>
 										<li>Led the first standardized year-end planning training for 500+ merchandising associates.</li>
 										<li>Raised new-store opening in-stock to ~99% and cut out-of-stock SKUs from 2,000+ to under 300.</li>
 									</ul>
@@ -182,26 +199,41 @@
 								<div class="job">
 									<h3>Merchandise Planner Analyst &bull; The Home Depot</h3>
 									<span class="when">Jun 2020 – Jun 2022</span>
-									<p>Executed assortment strategy for a billion-dollar category, leading 7+ company-wide resets that helped
-									turn comp sales from a double-digit decline to nearly flat. Worked with vendors to manage the category and run resets, and
-									partnered with Finance on the margin and cost impact of resets and SKU reductions.</p>
+									<ul>
+										<li>Executed assortment strategy for a billion-dollar category, leading 7+ company-wide resets.</li>
+										<li>Helped turn comp sales from a double-digit decline to nearly flat.</li>
+										<li>Partnered with vendors on resets and with Finance on margin and cost impact.</li>
+									</ul>
 								</div>
 
 								<div class="job">
 									<h3>Department Manager &bull; H&amp;M</h3>
 									<span class="when">Jan 2017 – May 2020 &bull; Atlanta, GA</span>
-									<p>Led a department driving 35%+ of a $5M+ store's revenue, with teams of up to 25 associates.</p>
+									<ul>
+										<li>Led a department driving over a third of a $5M+ store's revenue.</li>
+										<li>Managed budgets, inventory, and teams of up to 25 associates.</li>
+									</ul>
 								</div>
 
 								<div class="job">
 									<h3>Sales Team Manager &bull; Belk</h3>
 									<span class="when">Jun 2015 – Jan 2017 &bull; Rome, GA</span>
-									<p>Where I learned what actually happens to an assortment once it hits the sales floor.</p>
+									<ul>
+										<li>Coached and developed 15+ associates.</li>
+										<li>Executed seasonal planograms, visual standards, and brand directives.</li>
+									</ul>
 								</div>
 
+								<header class="major education-head">
+									<h2>Education</h2>
+								</header>
 								<div class="job">
 									<h3>University of Georgia</h3>
-									<span class="when">B.B.A. Management &bull; B.S. Psychology &bull; Certificate in Legal Studies</span>
+									<ul>
+										<li>B.B.A. Management</li>
+										<li>B.S. Psychology</li>
+										<li>Certificate in Legal Studies</li>
+									</ul>
 								</div>
 							</section>
 
