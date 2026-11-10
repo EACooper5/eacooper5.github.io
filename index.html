@@ -33,6 +33,7 @@
 				.section-head .actions li:first-child { padding-top: 0; }
 				.section-head .actions .button { width: auto; }
 			}
+			ul.actions.btn-row { flex-wrap: wrap; gap: 0.75em 0; }
 			.education-head { margin-top: 3.5em; padding-top: 3em; border-top: solid 1px #dddddd; }
 			/* About Me: photos sit inside the text */
 			.about .photo { width: 36%; max-width: 320px; border-radius: 0.5em; box-shadow: 0 4px 18px rgba(0,0,0,0.12); margin-bottom: 1.25em; }
@@ -76,7 +77,7 @@
 					<nav id="nav">
 						<ul>
 							<li><a href="#intro" class="active">About Me</a></li>
-							<li><a href="#work">What I Build</a></li>
+							<li><a href="#work">My Projects</a></li>
 							<li><a href="#experience">Experience</a></li>
 							<li><a href="#skills">Skills</a></li>
 							<li><a href="#contact">Contact</a></li>
@@ -102,9 +103,9 @@
 								<p>As AI continues to reshape the way we work, I'm excited by opportunities to help teams work smarter, not harder. Whether that's through agentic workflows, decision-support tools, or process automation, I enjoy finding practical ways to apply AI that create meaningful value instead of technology for technology's sake.</p>
 								<p>Ultimately, I enjoy translating ambiguity into strategy, aligning cross-functional partners around a shared vision, and shipping products that drive measurable adoption and business value.</p>
 
-								<ul class="actions">
-									<li><a href="resume.pdf" class="button primary" target="_blank">View Resume</a></li>
-									<li><a href="#contact" class="button">Get in Touch</a></li>
+								<ul class="actions fixed btn-row">
+									<li><a href="resume.pdf" class="button primary small icon solid fa-file-alt" target="_blank">Resume</a></li>
+									<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
 								</ul>
 
 								<h3 class="free-time">How I Spend My Free Time</h3>
@@ -131,10 +132,10 @@
 								<div style="clear: both;"></div>
 							</section>
 
-						<!-- What I Build -->
+						<!-- My Projects -->
 							<section id="work" class="main special">
 								<header class="major">
-									<h2>What I Build</h2>
+									<h2>My Projects</h2>
 									<p>Recent products from Merchandising Product &ndash; Assortment &amp; Space at The Home Depot.</p>
 								</header>
 								<ul class="features">
@@ -170,7 +171,7 @@
 									<header class="major">
 										<h2>Experience</h2>
 									</header>
-									<ul class="actions small">
+									<ul class="actions fixed btn-row small">
 										<li><a href="resume.pdf" class="button primary small icon solid fa-file-alt" target="_blank">Resume</a></li>
 										<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
 									</ul>
@@ -180,9 +181,9 @@
 									<h3>Product Manager &bull; The Home Depot</h3>
 									<span class="when">Sep 2024 – Present &bull; Merchandising Product, Assortment &amp; Space</span>
 									<ul>
-										<li>Own strategy, roadmap, OKRs, and go-to-market for AI-powered assortment and space products, including brand-new agentic workflows, with a 6-person team across engineering, AI, UX, and data science.</li>
-										<li>Launched a brand-new cross-channel assortment experience adopted by ~40% of active users within two quarters, using pilots, control groups, and phased rollouts.</li>
-										<li>Migrated 1,000+ suppliers supporting $15M+ in online sales, and returned ~17 weeks of engineering capacity by automating new-store assortment setup.</li>
+										<li>Own strategy, roadmap, OKRs, and go-to-market for AI-powered assortment and space planning products used by merchandising teams.</li>
+										<li>Lead brand-new products and agentic workflows from discovery through pilot, rollout, and adoption.</li>
+										<li>Partner with engineering, AI, UX, data science, and business leaders on priorities and technical tradeoffs.</li>
 									</ul>
 								</div>
 
@@ -190,9 +191,9 @@
 									<h3>Senior Business Analyst &bull; The Home Depot</h3>
 									<span class="when">Jun 2022 – Sep 2024 &bull; Merchandise Management Systems</span>
 									<ul>
-										<li>Turned user workflows and pain points into product requirements with Product and Merchant teams.</li>
-										<li>Led the first standardized year-end planning training for 500+ merchandising associates.</li>
-										<li>Raised new-store opening in-stock to ~99% and cut out-of-stock SKUs from 2,000+ to under 300.</li>
+										<li>Translated user workflows and pain points into product requirements with Product and Merchant teams.</li>
+										<li>Led training and enablement programs that drove tool adoption across merchandising.</li>
+										<li>Led new-store readiness across Merchandising, Store Environment, and Supply Chain.</li>
 									</ul>
 								</div>
 
@@ -200,9 +201,8 @@
 									<h3>Merchandise Planner Analyst &bull; The Home Depot</h3>
 									<span class="when">Jun 2020 – Jun 2022</span>
 									<ul>
-										<li>Executed assortment strategy for a billion-dollar category, leading 7+ company-wide resets.</li>
-										<li>Helped turn comp sales from a double-digit decline to nearly flat.</li>
-										<li>Partnered with vendors on resets and with Finance on margin and cost impact.</li>
+										<li>Executed assortment strategy for a major retail category, leading company-wide resets.</li>
+										<li>Partnered with vendors on category management and with Finance on margin and cost impact.</li>
 									</ul>
 								</div>
 
@@ -210,8 +210,7 @@
 									<h3>Department Manager &bull; H&amp;M</h3>
 									<span class="when">Jan 2017 – May 2020 &bull; Atlanta, GA</span>
 									<ul>
-										<li>Led a department driving over a third of a $5M+ store's revenue.</li>
-										<li>Managed budgets, inventory, and teams of up to 25 associates.</li>
+										<li>Led a department, managing budgets, inventory, and a team of associates.</li>
 									</ul>
 								</div>
 
@@ -219,8 +218,7 @@
 									<h3>Sales Team Manager &bull; Belk</h3>
 									<span class="when">Jun 2015 – Jan 2017 &bull; Rome, GA</span>
 									<ul>
-										<li>Coached and developed 15+ associates.</li>
-										<li>Executed seasonal planograms, visual standards, and brand directives.</li>
+										<li>Coached and developed associates while executing seasonal planograms, visual standards, and brand directives.</li>
 									</ul>
 								</div>
 
@@ -291,9 +289,10 @@
 									I'd love to hear from you.</p>
 								</header>
 								<footer class="major">
-									<ul class="actions special">
-										<li><a href="mailto:cooper.elizabetha@gmail.com" class="button primary">Email Me</a></li>
-										<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button" target="_blank" rel="noopener">LinkedIn</a></li>
+									<ul class="actions fixed btn-row special">
+										<li><a href="mailto:cooper.elizabetha@gmail.com" class="button small icon solid fa-envelope">Email Me</a></li>
+										<li><a href="resume.pdf" class="button primary small icon solid fa-file-alt" target="_blank">Resume</a></li>
+										<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
 									</ul>
 								</footer>
 							</section>
