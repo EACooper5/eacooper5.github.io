@@ -205,7 +205,7 @@
 									<div class="project-visual" style="background: linear-gradient(135deg, #efa8b0, #c79cc8);">
 										<span class="icon solid fa-robot"></span>
 										<ul class="project-stats">
-											<li><strong>Billions</strong><span>of rows analyzed across 9 enterprise systems</span></li>
+											<li><strong>Billions</strong><span>of rows analyzed across ~9 enterprise systems</span></li>
 											<li><strong>~95</strong><span>rules drafted with AI</span></li>
 											<li><strong>&ge;90%</strong><span>of recommendations approved as-is (target)</span></li>
 										</ul>
@@ -218,14 +218,14 @@
 										<p>Merchandise planners keep store assortments aligned across three sources: what the store is told to set, what downstream systems are told, and what the merchant says the store should carry. When those disagree, planners reconcile them by hand. A single case can take a full day, and the rules for resolving it live in people&rsquo;s heads, with a learning curve of about two years.</p>
 										<h4>What I did</h4>
 										<ul class="project-points">
-											<li><b>Tested the assumption first.</b> Leadership believed store reset projects were the biggest problem. Using BigQuery, SQL, and Claude, I analyzed billions of rows across nine enterprise systems and found that most misalignment builds up in everyday maintenance, outside reset projects entirely.</li>
+											<li><b>Tested the assumption first.</b> Leadership believed store reset projects were the biggest problem. Using BigQuery, SQL, and Claude, I analyzed billions of rows across about nine enterprise systems and found that most misalignment builds up in everyday maintenance, outside reset projects entirely.</li>
 											<li><b>Reset the strategy.</b> We prioritized everyday alignment, which is fully within our team&rsquo;s control, has fewer dependencies, and has enough volume to validate rules weekly. We chose drops, the largest source of misalignment and the one where quality was declining, as the first pilot.</li>
 											<li><b>Prototyped the workflow with AI.</b> AI profiled the data and drafted about 95 rules, and I prototyped the user journeys and a rules engine that gives the same answer for the same facts every time. Planners get one recommendation per case to approve, adjust, or dismiss. Approved actions run automatically, and planner feedback improves the rules.</li>
 										</ul>
 										<h4>Responsible AI</h4>
 										<p>I validate AI outputs before they reach users: re-running key figures directly in BigQuery, having engineers check rules against historical data, and keeping rules in draft until planners weigh in. That process caught an AI-generated metric that treated &ldquo;every system agrees a store shouldn&rsquo;t carry this item&rdquo; as less valid than &ldquo;every system agrees it should,&rdquo; which would have distorted both our reporting and the rules.</p>
 										<h4>Where it stands</h4>
-										<p>A pilot with a dozen super-user planners across 16 product classes is underway, with the first phase delivering in early 2027. Success means fewer misaligned records, less planner time per case, and at least 90% of recommendations approved as-is.</p>
+										<p>A pilot with about a dozen super-user planners is underway. Success means fewer misaligned records, less planner time per case, and at least 90% of recommendations approved as-is.</p>
 									</div>
 								</article>
 
@@ -261,9 +261,9 @@
 									<div class="project-visual" style="background: linear-gradient(135deg, #9bb2e1, #8cc9f0);">
 										<span class="icon solid fa-life-ring"></span>
 										<ul class="project-stats">
-											<li><strong>500+</strong><span>merchandising associates trained</span></li>
+											<li><strong>All</strong><span>merchants, associate merchants &amp; planners served</span></li>
 											<li><strong>3+</strong><span>onboarding cohorts each year</span></li>
-											<li><strong>1</strong><span>one-stop shop for the merchant team</span></li>
+											<li><strong>~10&ndash;20</strong><span>associates per cohort</span></li>
 										</ul>
 									</div>
 									<div class="project-body">
@@ -276,7 +276,7 @@
 										<ul class="project-points">
 											<li><b>Built the one-stop shop.</b> I architected and managed a central hub for all training, support, and development resources, serving merchants, associate merchants, and merchandise planners.</li>
 											<li><b>Brought it to the teams.</b> I attended department meetings to show merchant teams what was available and to gather feedback that shaped what the hub offered next.</li>
-											<li><b>Made onboarding and training repeatable.</b> I onboarded 3+ cohorts each year of 10&ndash;22 associates each, and led the organization&rsquo;s first standardized year-end planning training for 500+ merchandising associates across five enterprise-wide sessions.</li>
+											<li><b>Made onboarding repeatable.</b> I onboarded 3+ cohorts each year of about 10&ndash;20 associates each, giving every new group the same starting point.</li>
 										</ul>
 										<h4>The impact</h4>
 										<p>Merchant teams gained one reliable place to find answers and learn their tools, which improved access to resources and tool adoption, and every new cohort started from the same foundation.</p>
