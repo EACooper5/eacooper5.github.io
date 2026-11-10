@@ -20,7 +20,25 @@
 			.job ul { margin-bottom: 0; }
 			.tags { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; }
 			.tags li { padding: 0.3em 0.9em; border: solid 1px #dddddd; border-radius: 999px; font-size: 0.85em; }
-			.spotlight .image img { border-radius: 100%; }
+			/* About Me: photos sit inside the text */
+			.about .photo { width: 36%; max-width: 320px; border-radius: 0.5em; box-shadow: 0 4px 18px rgba(0,0,0,0.12); margin-bottom: 1.25em; }
+			.about .photo.right { float: right; margin-left: 2.5em; margin-top: 0.25em; }
+			.about .photo.left { float: left; width: 30%; max-width: 260px; margin-right: 2.5em; margin-top: 0.5em; }
+			.about .lead { font-size: 1.25em; line-height: 1.6; color: #555555; }
+			.about h3.free-time { clear: both; margin-top: 2.5em; padding-top: 2em; border-top: solid 1px #dddddd; font-size: 1.5em; }
+			.about h4 { font-size: 1em; font-weight: 400; color: #555555; margin-top: 1.5em; margin-bottom: 0.75em; }
+			.about h4 a { font-weight: 600; }
+			.about ul:not(.actions) { overflow: hidden; }
+			@media screen and (max-width: 736px) {
+				.about .photo.right, .about .photo.left { width: 42%; }
+				.about .photo.right { margin-left: 1.25em; }
+				.about .photo.left { margin-right: 1.25em; }
+				.about header.major { text-align: left; }
+				.about header.major:after { margin-left: 0; }
+			}
+			@media screen and (max-width: 480px) {
+				.about .photo.right, .about .photo.left { float: none; display: block; width: 100%; max-width: 100%; margin: 0 0 1.5em 0; }
+			}
 			/* Landing straight on the main panel (no banner) */
 			#wrapper { padding-top: 4em; }
 			#footer { padding: 2.5em 0 3em 0; }
@@ -55,27 +73,48 @@
 					<div id="main">
 
 						<!-- About -->
-							<section id="intro" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Hi, I'm Elizabeth</h2>
-										</header>
-										<p>I'm a product manager at The Home Depot, where I build AI-powered tools that help merchants
-										decide what goes on the shelf and where. I've worked every side of merchandising: running
-										departments at H&amp;M and Belk, planning a billion-dollar category as an analyst, and now building the
-										software those teams use every day.</p>
-										<p>Today I'm part of an AI-focused pod building agentic workflows for assortment and space. I like
-										brand-new products, messy data problems, and shipping things people actually adopt. I'm open to
-										Senior PM roles in Atlanta or remote.</p>
-										<ul class="actions">
-											<li><a href="resume.pdf" class="button primary" target="_blank">View Resume</a></li>
-											<li><a href="#contact" class="button">Get in Touch</a></li>
-										</ul>
-									</div>
-									<!-- Headshot -->
-									<span class="image"><img src="images/headshot.jpg" alt="Elizabeth A. Cooper" /></span>
-								</div>
+							<section id="intro" class="main about">
+								<header class="major">
+									<h2>Oh, hello! I'm Elizabeth.</h2>
+								</header>
+
+								<img class="photo right" src="images/elizabeth.jpg" alt="Elizabeth smiling in front of a colorful geometric mural" />
+
+								<p class="lead">I spend most of my time figuring out how to make complex work a little simpler.</p>
+								<p>Today, I'm a Product Manager at The Home Depot, building AI-powered products and agentic workflows for assortment and space planning. My focus is identifying complex business challenges, uncovering user needs, and delivering scalable solutions that improve both operational efficiency and customer outcomes.</p>
+								<p>What's unique about my perspective is that I've worked across nearly every stage of the merchandising lifecycle. I've run departments at H&amp;M and Belk, managed strategy for a billion-dollar product category as a Merchandise Planner, led training and enablement efforts for merchandising teams, and now build the software those teams use every day.</p>
+								<p>That experience taught me an important lesson: the best products aren't the ones with the most features. They're the ones that make someone's job noticeably easier.</p>
+								<p>Currently, I partner with users, engineers, designers, data scientists, and business leaders to turn complex operational challenges into solutions that create real value and save people time. I'm particularly passionate about customer-centric product strategy, AI, change management, and building products people actually want to use.</p>
+								<p>As AI continues to reshape the way we work, I'm excited by opportunities to help teams work smarter, not harder. Whether that's through agentic workflows, decision-support tools, or process automation, I enjoy finding practical ways to apply AI that create meaningful value instead of technology for technology's sake.</p>
+								<p>Ultimately, I enjoy translating ambiguity into strategy, aligning cross-functional partners around a shared vision, and shipping products that drive measurable adoption and business value.</p>
+
+								<ul class="actions">
+									<li><a href="resume.pdf" class="button primary" target="_blank">View Resume</a></li>
+									<li><a href="#contact" class="button">Get in Touch</a></li>
+								</ul>
+
+								<h3 class="free-time">How I Spend My Free Time</h3>
+
+								<h4>When I'm out exploring the world as a self-proclaimed <a href="https://www.wordgenius.com/words/hodophile" target="_blank" rel="noopener">hodophile (how-doh-phile)</a>, you'll usually find me:</h4>
+								<ul>
+									<li>Cheering on the Georgia Bulldogs or catching an NWSL match</li>
+									<li>Singing along to my favorite artist at a live concert</li>
+									<li>Hunting down a museum exhibit (bonus points if I can visit more than one in a day)</li>
+									<li>Heading to my next group fitness class</li>
+								</ul>
+
+								<img class="photo left" src="images/hello-kitty.jpg" alt="Hello Kitty, a cream-colored cat with blue eyes, sitting on a wood floor" />
+
+								<h4>When I'm at home:</h4>
+								<ul>
+									<li>Spending time with Hello Kitty, my feline roommate and unofficial quality assurance manager</li>
+									<li>Trying to stay on track with my Goodreads reading goal</li>
+									<li>Completing a puzzle while simultaneously binge-watching a new series</li>
+									<li>Learning that sewing is really just product development with fabric and significantly pointier tools</li>
+								</ul>
+
+								<p>In short: I'm passionate about making things better, whether that's through AI-powered products, a sewing project that seemed easier in theory, or convincing Hello Kitty that stakeholder feedback doesn't always make the roadmap.</p>
+								<div style="clear: both;"></div>
 							</section>
 
 						<!-- What I Build -->
