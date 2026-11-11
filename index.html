@@ -22,33 +22,51 @@
 			.career-intro { font-style: italic; font-size: 1.1em; color: #555555; margin-bottom: 2.5em; }
 			.tags-unused { list-style: none; padding: 0; margin: 0 0 1.5em 0; display: flex; flex-wrap: wrap; gap: 0.5em; justify-content: center; }
 			.tags li { padding: 0.3em 0.9em; border: solid 1px #dddddd; border-radius: 999px; font-size: 0.85em; }
-			/* My Projects: alternating sections */
-			.project { display: grid; grid-template-columns: 2fr 3fr; gap: 3em; align-items: start; padding: 3em 0; border-top: solid 1px #eeeeee; }
+			/* My Projects: graphic sits inside the text, text runs full width past it */
+			.project { padding: 3em 0; border-top: solid 1px #eeeeee; }
 			.project:first-of-type { border-top: 0; padding-top: 0.5em; }
-			.project.flip { grid-template-columns: 3fr 2fr; }
-			.project.flip .project-visual { order: 2; }
-			.project-visual { border-radius: 0.75em; color: #ffffff; padding: 2.5em 2em; text-align: center; position: sticky; top: 6em; }
-			.project-visual > .icon { display: inline-flex; align-items: center; justify-content: center; width: 4.5em; height: 4.5em; border-radius: 50%; background: rgba(255,255,255,0.25); font-size: 1.6em; margin-bottom: 0.9em; }
-			.project-visual > .icon:before { line-height: 1; font-size: 1.5em; }
-			.project-visual, .project-visual span { color: #ffffff; }
-			.project-stats { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.9em; }
-			.project-stats li { background: rgba(255,255,255,0.18); border-radius: 0.5em; padding: 0.7em 0.8em; }
-			.project-stats strong { display: block; color: #ffffff !important; font-size: 1.5em; line-height: 1.2; font-weight: 300; }
-			.project-stats span { display: block; font-size: 0.8em; line-height: 1.4; opacity: 0.95; }
-			.project-body .eyebrow { display: block; font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: #a89cc8; margin-bottom: 0.4em; }
+			.project:after { content: ""; display: block; clear: both; }
+			.project-visual { float: left; width: 250px; margin: 0.35em 2.5em 1.5em 0; }
+			.project.flip .project-visual { float: right; margin: 0.35em 0 1.5em 2.5em; }
+			.project-visual > .icon:before { line-height: 1; }
+			.project-stats { list-style: none; padding: 0; margin: 0; }
+			.project-stats strong { display: block; line-height: 1.15; }
+			.project-stats span { display: block; line-height: 1.4; }
+			.project-body .eyebrow { display: block; font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: #8a7fb8; margin-bottom: 0.4em; }
 			.project-body h3 { font-size: 1.6em; margin-bottom: 0.4em; }
-			.project-lead { font-style: italic; font-size: 1.05em; color: #555555; margin-bottom: 1.5em; }
-			.project-body h4 { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.08em; color: #4a4a4a; margin: 1.25em 0 0.35em 0; }
+			.project-lead { font-style: italic; font-size: 1.05em; color: #555555; margin-bottom: 1.25em; }
+			.project-body h4 { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.08em; color: #4a4a4a; margin: 1.5em 0 0.4em 0; }
 			.project-body p { margin-bottom: 0.75em; }
-			.project-points { margin: 0 0 0.75em 0; padding-left: 1.1em; }
-			.project-points li { margin-bottom: 0.6em; }
-			.project-points b { color: #4a4a4a; font-weight: 700 !important; }
-			@media screen and (max-width: 900px) {
-				.project, .project.flip { grid-template-columns: 1fr; gap: 1.5em; }
-				.project.flip .project-visual { order: 0; }
-				.project-visual { position: static; padding: 1.75em 1.25em; }
-				.project-stats { grid-template-columns: repeat(auto-fit, minmax(8em, 1fr)); }
+			.project-body p.point b { color: #3d3d3d; font-weight: 700 !important; }
+
+			/* Option A: clean white card */
+			.gfx-a .project-visual { background: #ffffff !important; border: solid 1px #e6e6e6; border-top: solid 4px var(--pc); border-radius: 0.6em; padding: 1.5em 1.4em 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+			.gfx-a .project-visual > .icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6em; height: 2.6em; border-radius: 50%; background: var(--pc); color: #ffffff; font-size: 1.1em; margin-bottom: 0.75em; }
+			.gfx-a .project-stats li { padding: 0.8em 0; border-top: solid 1px #eeeeee; }
+			.gfx-a .project-stats strong { font-size: 1.6em; font-weight: 600; color: #333333 !important; }
+			.gfx-a .project-stats span { font-size: 0.8em; color: #777777; }
+
+			/* Option B: minimal, no box */
+			.gfx-b .project-visual { background: none !important; padding: 0 0 0 1.25em; border-left: solid 3px var(--pc); }
+			.gfx-b .project-visual > .icon { display: block; color: var(--pc); font-size: 1.6em; margin-bottom: 0.6em; }
+			.gfx-b .project-stats li { padding: 0.5em 0 0.7em; }
+			.gfx-b .project-stats strong { font-size: 2em; font-weight: 300; color: #333333 !important; }
+			.gfx-b .project-stats span { font-size: 0.8em; color: #777777; }
+
+			/* Option C: soft tint, dark text */
+			.gfx-c .project-visual { background: var(--pt) !important; border-radius: 0.75em; padding: 1.5em 1.4em; }
+			.gfx-c .project-visual > .icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6em; height: 2.6em; border-radius: 0.6em; background: #ffffff; color: var(--pd); font-size: 1.1em; margin-bottom: 0.9em; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+			.gfx-c .project-stats { display: grid; gap: 0.6em; }
+			.gfx-c .project-stats li { background: #ffffff; border-radius: 0.5em; padding: 0.75em 0.9em; }
+			.gfx-c .project-stats strong { font-size: 1.5em; font-weight: 600; color: var(--pd) !important; }
+			.gfx-c .project-stats span { font-size: 0.8em; color: #666666; }
+
+			@media screen and (max-width: 736px) {
+				.project-visual, .project.flip .project-visual { float: none; width: 100%; margin: 0 0 1.5em 0; }
+				.project-stats { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(7.5em, 1fr)); gap: 0.6em 1em; }
+				.gfx-a .project-stats li { border-top: 0; padding: 0.4em 0; }
 			}
+
 			/* Skills */
 			.sk-group { font-size: 1.25em; margin: 0 0 1em 0; padding-bottom: 0.5em; border-bottom: solid 1px #dddddd; }
 			.sk-grid { display: grid; gap: 1.5em 2em; margin-bottom: 3em; }
@@ -196,13 +214,13 @@
 							</section>
 
 						<!-- My Projects -->
-							<section id="work" class="main">
+							<section id="work" class="main gfx-a">
 								<header class="major">
 									<h2>My Projects</h2>
 								</header>
 
 								<article class="project">
-									<div class="project-visual" style="background: linear-gradient(135deg, #efa8b0, #c79cc8);">
+									<div class="project-visual" style="--pc: #d98b96; --pt: #fbeef0; --pd: #b0566a;">
 										<span class="icon solid fa-robot"></span>
 										<ul class="project-stats">
 											<li><strong>Billions</strong><span>of rows analyzed across ~9 enterprise systems</span></li>
@@ -218,11 +236,10 @@
 										<p>Merchandise planners keep store assortments aligned across three sources: what the store is told to set, what downstream systems are told, and what merchants say the store should carry. When those sources disagree, merchandise planners reconcile them manually.</p>
 										<p>A single case can take a full day to resolve, and much of the decision-making relies on tribal knowledge that can take months to develop.</p>
 										<h4>What I did</h4>
-										<ul class="project-points">
-											<li><b>Tested the assumption first.</b> Leadership believed store reset projects were the biggest source of misalignment. Using BigQuery, SQL, and Claude, I analyzed billions of rows across approximately nine enterprise systems and discovered that most misalignment accumulated during everyday maintenance activities, outside of store reset projects entirely.</li>
-											<li><b>Reset the strategy.</b> Based on the findings, we focused on day-to-day assortment maintenance, an area fully within our team&rsquo;s control, with fewer dependencies and enough volume to validate improvements quickly. We selected product drops as the first pilot because they represented the largest source of misalignment and were trending in the wrong direction.</li>
-											<li><b>Prototyped the workflow with AI.</b> Using Claude, my merchandising domain knowledge, and existing training resources, I codified tribal knowledge into approximately 95 business rules and built a rules-engine prototype. The experience provides merchandise planners with a single recommendation they can approve, adjust, or dismiss, creating a more consistent and scalable decision-making process.</li>
-										</ul>
+										
+										<p class="point"><b>Tested the assumption first.</b> Leadership believed store reset projects were the biggest source of misalignment. Using BigQuery, SQL, and Claude, I analyzed billions of rows across approximately nine enterprise systems and discovered that most misalignment accumulated during everyday maintenance activities, outside of store reset projects entirely.</p>
+										<p class="point"><b>Reset the strategy.</b> Based on the findings, we focused on day-to-day assortment maintenance, an area fully within our team&rsquo;s control, with fewer dependencies and enough volume to validate improvements quickly. We selected product drops as the first pilot because they represented the largest source of misalignment and were trending in the wrong direction.</p>
+										<p class="point"><b>Prototyped the workflow with AI.</b> Using Claude, my merchandising domain knowledge, and existing training resources, I codified tribal knowledge into approximately 95 business rules and built a rules-engine prototype. The experience provides merchandise planners with a single recommendation they can approve, adjust, or dismiss, creating a more consistent and scalable decision-making process.</p>
 										<h4>Responsible AI</h4>
 										<p>I validate AI-generated outputs before they reach users by re-running key metrics directly in BigQuery, reviewing results with engineering partners, and keeping rules in draft until merchandise planners provide feedback.</p>
 										<p>That process surfaced an AI-generated metric that incorrectly treated &ldquo;every system agrees a store should not carry an item&rdquo; as less valid than &ldquo;every system agrees a store should carry it,&rdquo; which would have distorted both reporting and recommendation logic.</p>
@@ -233,7 +250,7 @@
 								</article>
 
 								<article class="project flip">
-									<div class="project-visual" style="background: linear-gradient(135deg, #c79cc8, #a89cc8);">
+									<div class="project-visual" style="--pc: #a97fb0; --pt: #f5eef6; --pd: #7d4f86;">
 										<span class="icon solid fa-layer-group"></span>
 										<ul class="project-stats">
 											<li><strong>~340</strong><span>users adopted within two quarters</span></li>
@@ -248,11 +265,10 @@
 										<h4>The problem</h4>
 										<p>Users managed store and eCommerce assortments in separate experiences and had long requested a single view showing where products were carried across every selling channel.</p>
 										<h4>What I did</h4>
-										<ul class="project-points">
-											<li><b>Set the vision.</b> I proposed and led the experience, framing it around the company&rsquo;s interconnected retail strategy: one source of truth for assortment across channels.</li>
-											<li><b>Built for scale.</b> Using user research, support cases, and workflow analysis, I explored new approaches for displaying large volumes of assortment data and completing critical tasks efficiently. This work led to our investment in AG Grid and enhancements to a modern backend capable of supporting significantly higher transaction volumes while creating the path away from legacy infrastructure.</li>
-											<li><b>Launched deliberately.</b> We validated workflows using real support scenarios, rolled out behind feature flags with pilot and control groups, and expanded adoption in phases. I hosted user forums, developed training materials, and worked directly with users to build confidence in the new experience.</li>
-										</ul>
+										
+										<p class="point"><b>Set the vision.</b> I proposed and led the experience, framing it around the company&rsquo;s interconnected retail strategy: one source of truth for assortment across channels.</p>
+										<p class="point"><b>Built for scale.</b> Using user research, support cases, and workflow analysis, I explored new approaches for displaying large volumes of assortment data and completing critical tasks efficiently. This work led to our investment in AG Grid and enhancements to a modern backend capable of supporting significantly higher transaction volumes while creating the path away from legacy infrastructure.</p>
+										<p class="point"><b>Launched deliberately.</b> We validated workflows using real support scenarios, rolled out behind feature flags with pilot and control groups, and expanded adoption in phases. I hosted user forums, developed training materials, and worked directly with users to build confidence in the new experience.</p>
 										<h4>The challenge</h4>
 										<p>The experience directly challenged an existing workflow, and leadership was concerned about disrupting established user behavior. I used user research, adoption data, and phased rollout strategies to demonstrate value, build organizational confidence, and establish the experience as a foundational step toward our long-term assortment vision.</p>
 										<h4>The impact</h4>
@@ -262,7 +278,7 @@
 								</article>
 
 								<article class="project">
-									<div class="project-visual" style="background: linear-gradient(135deg, #a89cc8, #9bb2e1);">
+									<div class="project-visual" style="--pc: #8a7fb8; --pt: #f0eef8; --pd: #5d5299;">
 										<span class="icon solid fa-store"></span>
 										<ul class="project-stats">
 											<li><strong>99%</strong><span>in-stock performance achieved</span></li>
@@ -277,11 +293,10 @@
 										<p>Opening a new store requires coordination across Merchandising, Store Environment, and Supply Chain. Limited visibility into assortment readiness and inventory gaps created risk that stores would open with missing products and incomplete assortments.</p>
 										<p>At the time, new stores were opening with an average of more than 2,000 out-of-stock SKUs.</p>
 										<h4>What I did</h4>
-										<ul class="project-points">
-											<li><b>Built visibility into the problem.</b> I designed reporting, analytics, and communication processes that surfaced assortment readiness, inventory risks, and execution gaps before stores opened, enabling teams to take action earlier.</li>
-											<li><b>Connected teams and processes.</b> I coordinated efforts across Merchandising, Store Environment, and Supply Chain, ensuring issues were identified early and ownership was clear.</li>
-											<li><b>Created a feedback loop.</b> I worked closely with merchant teams to understand recurring challenges, improve engagement with the new-store process, and continuously refine reporting based on user needs.</li>
-										</ul>
+										
+										<p class="point"><b>Built visibility into the problem.</b> I designed reporting, analytics, and communication processes that surfaced assortment readiness, inventory risks, and execution gaps before stores opened, enabling teams to take action earlier.</p>
+										<p class="point"><b>Connected teams and processes.</b> I coordinated efforts across Merchandising, Store Environment, and Supply Chain, ensuring issues were identified early and ownership was clear.</p>
+										<p class="point"><b>Created a feedback loop.</b> I worked closely with merchant teams to understand recurring challenges, improve engagement with the new-store process, and continuously refine reporting based on user needs.</p>
 										<h4>The challenge</h4>
 										<p>The work required aligning multiple organizations with different priorities and timelines while maintaining visibility into thousands of products moving through the opening process.</p>
 										<h4>The impact</h4>
@@ -291,7 +306,7 @@
 								</article>
 
 								<article class="project flip">
-									<div class="project-visual" style="background: linear-gradient(135deg, #9bb2e1, #8cc9f0);">
+									<div class="project-visual" style="--pc: #6aa9d6; --pt: #eaf4fb; --pd: #2f6f9f;">
 										<span class="icon solid fa-life-ring"></span>
 										<ul class="project-stats">
 											<li><strong>300+</strong><span>merchandising associates supported</span></li>
@@ -305,11 +320,10 @@
 										<p>The merchandising community (Senior Merchants, Merchants, Associate Merchants, Merchandise Planners, and others) depended on a wide range of tools and processes, but the training, support, and development resources behind them were scattered across multiple locations.</p>
 										<p>As a result, associates spent unnecessary time searching for answers, onboarding experiences varied, and valuable knowledge often wasn&rsquo;t easily accessible.</p>
 										<h4>What I did</h4>
-										<ul class="project-points">
-											<li><b>Built the one-stop shop.</b> I architected and managed a centralized SharePoint hub that brought together training, support, and development resources for the merchandising community. I created original content, established processes for reviewing and publishing cross-functional resources, and continuously improved the experience based on user feedback and evolving business needs.</li>
-											<li><b>Brought it to the users.</b> I attended department meetings, demonstrated available resources, gathered user feedback, and continuously evolved the experience based on team needs.</li>
-											<li><b>Standardized onboarding and enablement.</b> I supported onboarding for 3+ cohorts annually and helped create repeatable training and support processes so every new associate started from the same foundation.</li>
-										</ul>
+										
+										<p class="point"><b>Built the one-stop shop.</b> I architected and managed a centralized SharePoint hub that brought together training, support, and development resources for the merchandising community. I created original content, established processes for reviewing and publishing cross-functional resources, and continuously improved the experience based on user feedback and evolving business needs.</p>
+										<p class="point"><b>Brought it to the users.</b> I attended department meetings, demonstrated available resources, gathered user feedback, and continuously evolved the experience based on team needs.</p>
+										<p class="point"><b>Standardized onboarding and enablement.</b> I supported onboarding for 3+ cohorts annually and helped create repeatable training and support processes so every new associate started from the same foundation.</p>
 										<h4>The impact</h4>
 										<p>More than 300 merchandising associates gained a single destination for training, support, and development resources.</p>
 										<p>The hub strengthened onboarding, improved tool adoption, supported change management efforts, and reduced time spent searching for answers across the organization.</p>
