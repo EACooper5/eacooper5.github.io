@@ -39,32 +39,17 @@
 			.project-body p { margin-bottom: 0.75em; }
 			.project-body p.point b { color: #3d3d3d; font-weight: 700 !important; }
 
-			/* Option A: clean white card */
-			.gfx-a .project-visual { background: #ffffff !important; border: solid 1px #e6e6e6; border-top: solid 4px var(--pc); border-radius: 0.6em; padding: 1.5em 1.4em 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
-			.gfx-a .project-visual > .icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6em; height: 2.6em; border-radius: 50%; background: var(--pc); color: #ffffff; font-size: 1.1em; margin-bottom: 0.75em; }
-			.gfx-a .project-stats li { padding: 0.8em 0; border-top: solid 1px #eeeeee; }
-			.gfx-a .project-stats strong { font-size: 1.6em; font-weight: 600; color: #333333 !important; }
-			.gfx-a .project-stats span { font-size: 0.8em; color: #777777; }
-
-			/* Option B: minimal, no box */
-			.gfx-b .project-visual { background: none !important; padding: 0 0 0 1.25em; border-left: solid 3px var(--pc); }
-			.gfx-b .project-visual > .icon { display: block; color: var(--pc); font-size: 1.6em; margin-bottom: 0.6em; }
-			.gfx-b .project-stats li { padding: 0.5em 0 0.7em; }
-			.gfx-b .project-stats strong { font-size: 2em; font-weight: 300; color: #333333 !important; }
-			.gfx-b .project-stats span { font-size: 0.8em; color: #777777; }
-
-			/* Option C: soft tint, dark text */
-			.gfx-c .project-visual { background: var(--pt) !important; border-radius: 0.75em; padding: 1.5em 1.4em; }
-			.gfx-c .project-visual > .icon { display: inline-flex; align-items: center; justify-content: center; width: 2.6em; height: 2.6em; border-radius: 0.6em; background: #ffffff; color: var(--pd); font-size: 1.1em; margin-bottom: 0.9em; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
-			.gfx-c .project-stats { display: grid; gap: 0.6em; }
-			.gfx-c .project-stats li { background: #ffffff; border-radius: 0.5em; padding: 0.75em 0.9em; }
-			.gfx-c .project-stats strong { font-size: 1.5em; font-weight: 600; color: var(--pd) !important; }
-			.gfx-c .project-stats span { font-size: 0.8em; color: #666666; }
+			/* Graphic: clean white card with a plain colored icon */
+			.project-visual { background: #ffffff; border: solid 1px #e6e6e6; border-top: solid 4px var(--pc); border-radius: 0.6em; padding: 1.4em 1.4em 0.5em; box-shadow: 0 2px 10px rgba(0,0,0,0.04); }
+			.project-visual > .icon { display: block; color: var(--pc); font-size: 1.6em; margin-bottom: 0.5em; }
+			.project-stats li { padding: 0.8em 0; border-top: solid 1px #eeeeee; }
+			.project-stats strong { font-size: 1.6em; font-weight: 600; color: #333333 !important; }
+			.project-stats span { font-size: 0.8em; color: #777777; }
 
 			@media screen and (max-width: 736px) {
 				.project-visual, .project.flip .project-visual { float: none; width: 100%; margin: 0 0 1.5em 0; }
 				.project-stats { display: grid !important; grid-template-columns: repeat(auto-fit, minmax(7.5em, 1fr)); gap: 0.6em 1em; }
-				.gfx-a .project-stats li { border-top: 0; padding: 0.4em 0; }
+				.project-stats li { border-top: 0; padding: 0.4em 0; }
 			}
 
 			/* Skills */
@@ -214,7 +199,7 @@
 							</section>
 
 						<!-- My Projects -->
-							<section id="work" class="main gfx-a">
+							<section id="work" class="main">
 								<header class="major">
 									<h2>My Projects</h2>
 								</header>
