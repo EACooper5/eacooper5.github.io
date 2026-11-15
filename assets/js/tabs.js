@@ -19,22 +19,51 @@
 			if (scroll) window.scrollTo(0, 0);
 		}
 
-		// Any link to a section (tabs, "Get in Touch", etc.) switches tabs.
+		// A link to something inside a tab (e.g. a case study): open that tab, then scroll to it.
+		function showInner(id, smooth) {
+			var el = document.getElementById(id);
+			if (!el) return false;
+			var $sec = $(el).closest('#main > section.main');
+			if (!$sec.length) return false;
+			show($sec.attr('id'), false);
+			el.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+			return true;
+		}
+
+		// Any link to a section (tabs, "See My Work", etc.) switches tabs.
 		$(document).on('click', 'a[href^="#"]', function(e) {
 			var id = this.getAttribute('href').slice(1);
-			if (ids.indexOf(id) === -1) return;
-			e.preventDefault();
-			if (history.replaceState) history.replaceState(null, '', '#' + id);
+			if (!id) return;
+			if (ids.indexOf(id) !== -1) {
+				e.preventDefault();
+				if (history.replaceState) history.replaceState(null, '', '#' + id);
+				show(id, true);
+			} else if (document.getElementById(id)) {
+				e.preventDefault();
+				if (history.replaceState) history.replaceState(null, '', '#' + id);
+				showInner(id, true);
+			}
+		});
+
+		$(window).on('hashchange', function() {
+			var id = location.hash.slice(1);
+			if (ids.indexOf(id) === -1 && showInner(id, true)) return;
 			show(id, true);
 		});
 
-		$(window).on('hashchange', function() { show(location.hash.slice(1), true); });
+		var startId = location.hash.slice(1),
+			startInner = ids.indexOf(startId) === -1 && document.getElementById(startId);
+		show(startInner ? $(startInner).closest('#main > section.main').attr('id') : startId, false);
 
-		show(location.hash.slice(1), false);
-
-		// Opening a shared link (e.g. #experience) shouldn't jump down the page.
+		// Opening a shared link (e.g. #experience) shouldn't jump down the page,
+		// but a link straight to a case study should land on it.
 		if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-		$(window).on('load', function() { setTimeout(function() { window.scrollTo(0, 0); }, 0); });
-		window.scrollTo(0, 0);
+		$(window).on('load', function() {
+			setTimeout(function() {
+				if (startInner) startInner.scrollIntoView({ block: 'start' });
+				else window.scrollTo(0, 0);
+			}, 0);
+		});
+		if (!startInner) window.scrollTo(0, 0);
 	});
 })(jQuery);

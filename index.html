@@ -167,6 +167,67 @@
 			/* LinkedIn link at the top of About */
 			.about ul.actions.top-links { margin: 0; padding: 0; }
 			.about ul.actions.top-links li { padding: 0; }
+			/* ===== Projects ===== */
+			#work .work-intro { color: var(--muted); margin: -0.5em 0 1.75em 0; }
+			#work .project { border-top: solid 1px #e6e6e6; padding: 3.5em 0 2.5em; scroll-margin-top: 1em; }
+			#work .project:first-of-type { margin-top: 3.5em; }
+			#work .project .eyebrow { display: block; font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: var(--accent); margin-bottom: 0.4em; }
+			#work .project h3 { font-size: 1.7em; margin-bottom: 0.35em; }
+			#work .project h4 { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); margin: 1.75em 0 0.5em; }
+			#work .project p { margin-bottom: 0.85em; }
+			#work .project p.point b { color: var(--ink); }
+			#main .project-lead { font-size: 1.1em; color: var(--muted); margin-bottom: 1em; }
+			/* One-line result under the title */
+			#main .outcome { background: #f4f2fa; border-left: solid 4px var(--accent); border-radius: 0 0.4em 0.4em 0; padding: 0.8em 1.1em; color: var(--ink); margin-bottom: 1.75em !important; }
+			/* Stats: full-width row */
+			.stat-row { list-style: none; padding: 0 !important; margin: 0 0 2em 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(10em, 1fr)); border: solid 1px #e6e6e6; border-radius: 0.6em; }
+			.stat-row li { padding: 1em 1.25em; border-left: solid 1px #e6e6e6; }
+			.stat-row li:first-child { border-left: 0; }
+			.stat-row strong { display: block; font-size: 1.7em; line-height: 1.15; color: var(--ink) !important; }
+			.stat-row span { display: block; font-size: 0.85em; line-height: 1.4; color: var(--muted); margin-top: 0.25em; }
+			/* Simple workflow diagram */
+			.flow { display: flex; align-items: center; gap: 0.9em; margin: 0 0 2em 0; padding: 1.5em; background: #fafafa; border: solid 1px #eeeeee; border-radius: 0.6em; flex-wrap: wrap; }
+			.flow-col { display: flex; flex-direction: column; gap: 0.5em; flex: 1 1 13em; }
+			.flow-chip { display: block; background: #ffffff; border: dashed 1px #c9c2e0; border-radius: 0.4em; padding: 0.45em 0.8em; font-size: 0.85em; color: var(--body); }
+			.flow-col.scattered .flow-chip:nth-child(1) { margin-right: 2.5em; } .flow-col.scattered .flow-chip:nth-child(2) { margin-left: 1.5em; margin-right: 1em; } .flow-col.scattered .flow-chip:nth-child(3) { margin-left: 3em; }
+			.flow-chip .icon { color: var(--accent); }
+			.flow-arrow { flex: none; width: 2.2em; height: 2px; background: var(--accent); position: relative; }
+			.flow-arrow:after { content: ""; position: absolute; right: -1px; top: -5px; border: solid 6px transparent; border-left: solid 8px var(--accent); border-right: 0; }
+			.flow-node { flex: 1 1 10em; text-align: center; background: #ffffff; border: solid 2px #d9d4ea; border-radius: 0.6em; padding: 0.9em 0.8em; font-weight: 600; color: var(--ink); line-height: 1.3; }
+			.flow-node .icon { display: block; color: var(--accent); font-size: 1.3em; margin-bottom: 0.35em; }
+			.flow-node small { display: block; font-weight: 400; font-size: 0.8em; color: var(--muted); margin-top: 0.3em; }
+			.flow-node.out { background: var(--accent); border-color: var(--accent); color: #ffffff; }
+			.flow-node.out .icon, .flow-node.out small { color: #ffffff; }
+			.flow figcaption { flex: 1 0 100%; font-size: 0.85em; color: var(--muted); margin-top: 0.4em; }
+			@media screen and (max-width: 736px) {
+				.flow { flex-direction: column; align-items: stretch; }
+				.flow-col, .flow-node { flex: none; }
+				.flow-arrow { width: 2px; height: 1.6em; align-self: center; }
+				.flow-arrow:after { right: -5px; top: auto; bottom: -1px; border: solid 6px transparent; border-top: solid 8px var(--accent); border-bottom: 0; }
+				.flow-col.scattered .flow-chip { margin: 0 !important; }
+			}
+			/* Responsible AI callout */
+			.callout { background: #f4f2fa; border: solid 1px #d9d4ea; border-radius: 0.6em; padding: 1.25em 1.4em 0.5em; margin: 1.5em 0 0.5em; }
+			#main .callout h5 { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin: 0 0 0.6em; display: flex; gap: 0.5em; align-items: center; }
+			.back-to-cards { display: inline-block; margin-top: 1em; font-size: 0.85em; color: var(--accent) !important; border-bottom: 0 !important; }
+			/* Project cards: shared */
+			.pgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25em; scroll-margin-top: 1em; }
+			#main a.pcard { display: flex; flex-direction: column; border: solid 1px #e6e6e6; border-top: solid 4px var(--accent); border-radius: 0.6em; padding: 1.4em 1.5em 1.25em; color: var(--body); background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.04); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+			#main a.pcard:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(95,77,147,0.15); color: var(--body); }
+			.pcard-top { display: flex; align-items: center; gap: 0.6em; margin-bottom: 0.6em; }
+			.pcard-top .icon { color: var(--accent); }
+			.pcard-role { font-size: 0.72em; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: var(--accent); }
+			.pcard-title { font-size: 1.2em; font-weight: 600; color: var(--ink); line-height: 1.3; margin-bottom: 0.6em; }
+			.pcard-num { font-size: 2.3em; font-weight: 700; color: var(--ink); line-height: 1.1; }
+			.pcard-numlabel { font-size: 0.85em; color: var(--muted); margin-bottom: 1em; }
+			.pcard-take { display: none; font-size: 0.95em; line-height: 1.5; margin-bottom: 1em; }
+			.pcard-cta { margin-top: auto; font-weight: 600; color: var(--accent); font-size: 0.9em; }
+			/* Option B: story-first cards (takeaway leads, number as a small chip) */
+			.pgrid.story .pcard-take { display: block; order: 3; }
+			.pgrid.story .pcard-num { order: 4; font-size: 0.85em; display: inline-block; align-self: flex-start; background: #f0eef8; color: var(--accent); padding: 0.25em 0.7em; border-radius: 999px; margin-bottom: 0; }
+			.pgrid.story .pcard-numlabel { order: 5; margin-top: 0.3em; }
+			.pgrid.story .pcard-cta { order: 6; }
+			@media screen and (max-width: 736px) { .pgrid { grid-template-columns: 1fr; } }
 			/* About: button to the Projects tab, with a tooltip */
 			.about ul.actions.work-link { margin: 0.5em 0 0 0; padding: 0; }
 			.about ul.actions.work-link li { padding: 0; position: relative; }
@@ -281,115 +342,184 @@
 									<h2>My Projects</h2>
 								</header>
 
-								<article class="project">
-									<div class="project-visual" style="--pc: #d98b96; --pt: #fbeef0; --pd: #b0566a;">
-										<span class="icon solid fa-robot"></span>
-										<ul class="project-stats">
-											<li><strong>Billions</strong><span>of rows analyzed across ~9 enterprise systems</span></li>
-											<li><strong>~95</strong><span>business rules drafted and refined with AI</span></li>
-											<li><strong>120</strong><span>merchandise planners in the potential user population</span></li>
-										</ul>
-									</div>
-									<div class="project-body">
-										<span class="eyebrow">Product Manager</span>
-										<h3>Merchandise Planner Execution</h3>
-										<p class="project-lead">Turning complex reconciliation work into recommendations a merchandise planner can review, approve, and act on in minutes.</p>
-										<h4>The problem</h4>
-										<p>Merchandise planners keep store assortments aligned across three sources: what the store is told to set, what downstream systems are told, and what merchants say the store should carry. When those sources disagree, merchandise planners reconcile them manually.</p>
-										<p>A single case can take a full day to resolve, and much of the decision-making relies on tribal knowledge that can take months to develop.</p>
-										<h4>What I did</h4>
-										
-										<p class="point"><b>Tested the assumption first.</b> Leadership believed store reset projects were the biggest source of misalignment. Using BigQuery, SQL, and Claude, I analyzed billions of rows across approximately nine enterprise systems and discovered that most misalignment accumulated during everyday maintenance activities, outside of store reset projects entirely.</p>
-										<p class="point"><b>Reset the strategy.</b> Based on the findings, we focused on day-to-day assortment maintenance, an area fully within our team&rsquo;s control, with fewer dependencies and enough volume to validate improvements quickly. We selected product drops as the first pilot because they represented the largest source of misalignment and were trending in the wrong direction.</p>
-										<p class="point"><b>Prototyped the workflow with AI.</b> Using Claude, my merchandising domain knowledge, and existing training resources, I codified tribal knowledge into approximately 95 business rules and built a rules-engine prototype. The experience provides merchandise planners with a single recommendation they can approve, adjust, or dismiss, creating a more consistent and scalable decision-making process.</p>
-										<h4>Responsible AI</h4>
+								<p class="work-intro">Four projects, from product strategy to store-floor execution. Pick one to jump in.</p>
+
+								<div class="pgrid" id="project-cards">
+									<a class="pcard" href="#p-mpe">
+										<span class="pcard-top"><span class="icon solid fa-robot" aria-hidden="true"></span><span class="pcard-role">Product Manager</span></span>
+										<span class="pcard-title">Merchandise Planner Execution</span>
+										<span class="pcard-num">~95</span>
+										<span class="pcard-numlabel">business rules codified with AI</span>
+										<span class="pcard-take">Found the real source of the problem, then prototyped an AI-assisted fix.</span>
+										<span class="pcard-cta">Read case study &rarr;</span>
+									</a>
+									<a class="pcard" href="#p-ix">
+										<span class="pcard-top"><span class="icon solid fa-layer-group" aria-hidden="true"></span><span class="pcard-role">Product Manager</span></span>
+										<span class="pcard-title">Interconnected Experience</span>
+										<span class="pcard-num">41%</span>
+										<span class="pcard-numlabel">of active users adopted in two quarters</span>
+										<span class="pcard-take">One view of assortment across stores and eCommerce.</span>
+										<span class="pcard-cta">Read case study &rarr;</span>
+									</a>
+									<a class="pcard" href="#p-nsr">
+										<span class="pcard-top"><span class="icon solid fa-store" aria-hidden="true"></span><span class="pcard-role">Senior Business Analyst</span></span>
+										<span class="pcard-title">New Store Readiness</span>
+										<span class="pcard-num">99%</span>
+										<span class="pcard-numlabel">in-stock at new store openings</span>
+										<span class="pcard-take">New stores open with the right products in the right place.</span>
+										<span class="pcard-cta">Read case study &rarr;</span>
+									</a>
+									<a class="pcard" href="#p-hub">
+										<span class="pcard-top"><span class="icon solid fa-life-ring" aria-hidden="true"></span><span class="pcard-role">Senior Business Analyst</span></span>
+										<span class="pcard-title">Merchandising Support Hub</span>
+										<span class="pcard-num">300+</span>
+										<span class="pcard-numlabel">associates with one place for answers</span>
+										<span class="pcard-take">Training, support, and development, finally in one spot.</span>
+										<span class="pcard-cta">Read case study &rarr;</span>
+									</a>
+								</div>
+
+								<article class="project" id="p-mpe">
+									<span class="eyebrow">Product Manager</span>
+									<h3>Merchandise Planner Execution</h3>
+									<p class="project-lead">Turning complex reconciliation work into recommendations a merchandise planner can review, approve, and act on in minutes.</p>
+									<p class="outcome" data-opt-a="&lt;b&gt;Status:&lt;/b&gt; Pilot underway with ~12 super-user planners. Target: 90% of recommendations approved as-is."><b>Key finding:</b> The problem wasn&rsquo;t where everyone thought it was, so we changed course before building anything.</p>
+									<ul class="stat-row">
+										<li><strong>Billions</strong><span>of rows analyzed across ~9 enterprise systems</span></li>
+										<li><strong>~95</strong><span>business rules drafted and refined with AI</span></li>
+										<li><strong>120</strong><span>merchandise planners in the potential user population</span></li>
+									</ul>
+									<figure class="flow" aria-label="Diagram: three conflicting sources feed a rules engine that produces one recommendation">
+										<div class="flow-col">
+											<span class="flow-chip">What the store is told to set</span>
+											<span class="flow-chip">What downstream systems are told</span>
+											<span class="flow-chip">What merchants say to carry</span>
+										</div>
+										<span class="flow-arrow" aria-hidden="true"></span>
+										<div class="flow-node"><span class="icon solid fa-cogs" aria-hidden="true"></span>Rules engine<small>~95 business rules</small></div>
+										<span class="flow-arrow" aria-hidden="true"></span>
+										<div class="flow-node out"><span class="icon solid fa-check-circle" aria-hidden="true"></span>1 recommendation<small>Approve &middot; Adjust &middot; Dismiss</small></div>
+										<figcaption>Before: a full day reconciling three sources by hand. After: one recommendation to review.</figcaption>
+									</figure>
+									<h4>The problem</h4>
+									<p>Merchandise planners keep store assortments aligned across three sources: what the store is told to set, what downstream systems are told, and what merchants say the store should carry. When those sources disagree, merchandise planners reconcile them manually.</p>
+									<p>A single case can take a full day to resolve, and much of the decision-making relies on tribal knowledge that can take months to develop.</p>
+									<h4>What I did</h4>
+									<p class="point"><b>Tested the assumption first.</b> Leadership believed store reset projects were the biggest source of misalignment. Using BigQuery, SQL, and Claude, I analyzed billions of rows across approximately nine enterprise systems and discovered that most misalignment accumulated during everyday maintenance activities, outside of store reset projects entirely.</p>
+									<p class="point"><b>Reset the strategy.</b> Based on the findings, we focused on day-to-day assortment maintenance, an area fully within our team&rsquo;s control, with fewer dependencies and enough volume to validate improvements quickly. We selected product drops as the first pilot because they represented the largest source of misalignment and were trending in the wrong direction.</p>
+									<p class="point"><b>Prototyped the workflow with AI.</b> Using Claude, my merchandising domain knowledge, and existing training resources, I codified tribal knowledge into approximately 95 business rules and built a rules-engine prototype. The experience provides merchandise planners with a single recommendation they can approve, adjust, or dismiss, creating a more consistent and scalable decision-making process.</p>
+									<aside class="callout">
+										<h5><span class="icon solid fa-shield-alt" aria-hidden="true"></span>Responsible AI</h5>
 										<p>I validate AI-generated outputs before they reach users by re-running key metrics directly in BigQuery, reviewing results with engineering partners, and keeping rules in draft until merchandise planners provide feedback.</p>
 										<p>That process surfaced an AI-generated metric that incorrectly treated &ldquo;every system agrees a store should not carry an item&rdquo; as less valid than &ldquo;every system agrees a store should carry it,&rdquo; which would have distorted both reporting and recommendation logic.</p>
-										<h4>Where it stands</h4>
-										<p>A pilot involving approximately a dozen super-user merchandise planners is currently underway, representing an opportunity that could eventually support roughly 120 merchandise planners.</p>
-										<p>Success will be measured through reduced misalignment, lower merchandise planner effort per case, and at least 90% of recommendations being approved as-is.</p>
-									</div>
+									</aside>
+									<h4>The impact</h4>
+									<p>A pilot involving approximately a dozen super-user merchandise planners is currently underway, representing an opportunity that could eventually support roughly 120 merchandise planners.</p>
+									<p>Success will be measured through reduced misalignment, lower merchandise planner effort per case, and at least 90% of recommendations being approved as-is.</p>
+									<a class="back-to-cards" href="#project-cards">&uarr; Back to all projects</a>
 								</article>
 
-								<article class="project flip">
-									<div class="project-visual" style="--pc: #a97fb0; --pt: #f5eef6; --pd: #7d4f86;">
-										<span class="icon solid fa-layer-group"></span>
-										<ul class="project-stats">
-											<li><strong>~340</strong><span>users adopted within two quarters</span></li>
-											<li><strong>~41%</strong><span>of active user base</span></li>
-											<li><strong>1 view</strong><span>of assortment across stores and eCommerce</span></li>
-										</ul>
-									</div>
-									<div class="project-body">
-										<span class="eyebrow">Product Manager</span>
-										<h3>Interconnected Experience</h3>
-										<p class="project-lead">A cross-channel view of assortment across stores and eCommerce.</p>
-										<h4>The problem</h4>
-										<p>Users managed store and eCommerce assortments in separate experiences and had long requested a single view showing where products were carried across every selling channel.</p>
-										<h4>What I did</h4>
-										
-										<p class="point"><b>Set the vision.</b> I proposed and led the experience, framing it around the company&rsquo;s interconnected retail strategy: one source of truth for assortment across channels.</p>
-										<p class="point"><b>Built for scale.</b> Using user research, support cases, and workflow analysis, I explored new approaches for displaying large volumes of assortment data and completing critical tasks efficiently. This work led to our investment in AG Grid and enhancements to a modern backend capable of supporting significantly higher transaction volumes while creating the path away from legacy infrastructure.</p>
-										<p class="point"><b>Launched deliberately.</b> We validated workflows using real support scenarios, rolled out behind feature flags with pilot and control groups, and expanded adoption in phases. I hosted user forums, developed training materials, and worked directly with users to build confidence in the new experience.</p>
-										<h4>The challenge</h4>
-										<p>The experience directly challenged an existing workflow, and leadership was concerned about disrupting established user behavior. I used user research, adoption data, and phased rollout strategies to demonstrate value, build organizational confidence, and establish the experience as a foundational step toward our long-term assortment vision.</p>
-										<h4>The impact</h4>
-										<p>Approximately 340 users, representing 41% of the active user base, adopted the experience within two quarters.</p>
-										<p>Today, it serves as the foundation for future assortment capabilities, enabling users to work faster and at greater scale.</p>
-									</div>
+								<article class="project" id="p-ix">
+									<span class="eyebrow">Product Manager</span>
+									<h3>Interconnected Experience</h3>
+									<p class="project-lead">A cross-channel view of assortment across stores and eCommerce.</p>
+									<p class="outcome"><b>Outcome:</b> ~340 users (41% of the active user base) adopted it within two quarters, and it&rsquo;s now the foundation for future assortment work.</p>
+									<ul class="stat-row">
+										<li><strong>~340</strong><span>users adopted within two quarters</span></li>
+										<li><strong>~41%</strong><span>of active user base</span></li>
+										<li><strong>1 view</strong><span>of assortment across stores and eCommerce</span></li>
+									</ul>
+									<figure class="flow" aria-label="Diagram: separate store and eCommerce views become one cross-channel view">
+										<div class="flow-col">
+											<span class="flow-chip"><span class="icon solid fa-store" aria-hidden="true"></span> Store assortment</span>
+											<span class="flow-chip"><span class="icon solid fa-shopping-cart" aria-hidden="true"></span> eCommerce assortment</span>
+										</div>
+										<span class="flow-arrow" aria-hidden="true"></span>
+										<div class="flow-node out"><span class="icon solid fa-layer-group" aria-hidden="true"></span>One view<small>Every channel, one place</small></div>
+										<figcaption>Before: two separate experiences. After: one source of truth across channels.</figcaption>
+									</figure>
+									<h4>The problem</h4>
+									<p>Users managed store and eCommerce assortments in separate experiences and had long requested a single view showing where products were carried across every selling channel.</p>
+									<h4>What I did</h4>
+									<p class="point"><b>Set the vision.</b> I proposed and led the experience, framing it around the company&rsquo;s interconnected retail strategy: one source of truth for assortment across channels.</p>
+									<p class="point"><b>Built for scale.</b> Using user research, support cases, and workflow analysis, I explored new approaches for displaying large volumes of assortment data and completing critical tasks efficiently. This work led to our investment in AG Grid and enhancements to a modern backend capable of supporting significantly higher transaction volumes while creating the path away from legacy infrastructure.</p>
+									<p class="point"><b>Launched deliberately.</b> We validated workflows using real support scenarios, rolled out behind feature flags with pilot and control groups, and expanded adoption in phases. I hosted user forums, developed training materials, and worked directly with users to build confidence in the new experience.</p>
+									<h4>The challenge</h4>
+									<p>The experience directly challenged an existing workflow, and leadership was concerned about disrupting established user behavior. I used user research, adoption data, and phased rollout strategies to demonstrate value, build organizational confidence, and establish the experience as a foundational step toward our long-term assortment vision.</p>
+									<h4>The impact</h4>
+									<p>Approximately 340 users, representing 41% of the active user base, adopted the experience within two quarters.</p>
+									<p>Today, it serves as the foundation for future assortment capabilities, enabling users to work faster and at greater scale.</p>
+									<a class="back-to-cards" href="#project-cards">&uarr; Back to all projects</a>
 								</article>
 
-								<article class="project">
-									<div class="project-visual" style="--pc: #8a7fb8; --pt: #f0eef8; --pd: #5d5299;">
-										<span class="icon solid fa-store"></span>
-										<ul class="project-stats">
-											<li><strong>99%</strong><span>in-stock performance achieved</span></li>
-											<li><strong>3</strong><span>major organizations aligned</span></li>
-										</ul>
-									</div>
-									<div class="project-body">
-										<span class="eyebrow">Senior Business Analyst</span>
-										<h3>New Store Readiness</h3>
-										<p class="project-lead">Helping new stores open with the right products in the right place at the right time.</p>
-										<h4>The problem</h4>
-										<p>Opening a new store requires coordination across Merchandising, Store Environment, and Supply Chain. Limited visibility into assortment readiness and inventory gaps created risk that stores would open with missing products and incomplete assortments.</p>
-										<p>At the time, new stores were opening with an average of more than 2,000 out-of-stock SKUs.</p>
-										<h4>What I did</h4>
-										
-										<p class="point"><b>Built visibility into the problem.</b> I designed reporting, analytics, and communication processes that surfaced assortment readiness, inventory risks, and execution gaps before stores opened, enabling teams to take action earlier.</p>
-										<p class="point"><b>Connected teams and processes.</b> I coordinated efforts across Merchandising, Store Environment, and Supply Chain, ensuring issues were identified early and ownership was clear.</p>
-										<p class="point"><b>Created a feedback loop.</b> I worked closely with merchant teams to understand recurring challenges, improve engagement with the new-store process, and continuously refine reporting based on user needs.</p>
-										<h4>The challenge</h4>
-										<p>The work required aligning multiple organizations with different priorities and timelines while maintaining visibility into thousands of products moving through the opening process.</p>
-										<h4>The impact</h4>
-										<p>New-store in-stock performance improved to 99%, while out-of-stock SKUs at opening fell significantly from prior store openings.</p>
-										<p>The reporting and communication processes became core operating tools for new-store teams, helping drive consistent in-stock performance while improving visibility, accountability, and execution across future store openings.</p>
-									</div>
+								<article class="project" id="p-nsr">
+									<span class="eyebrow">Senior Business Analyst</span>
+									<h3>New Store Readiness</h3>
+									<p class="project-lead">Helping new stores open with the right products in the right place at the right time.</p>
+									<p class="outcome"><b>Outcome:</b> New stores reached 99% in-stock at opening, after averaging 2,000+ out-of-stock SKUs.</p>
+									<ul class="stat-row">
+										<li><strong>99%</strong><span>in-stock performance achieved</span></li>
+										<li><strong>3</strong><span>major organizations aligned</span></li>
+									</ul>
+									<figure class="flow" aria-label="Diagram: three teams feed shared readiness reporting so stores open in stock">
+										<div class="flow-col">
+											<span class="flow-chip">Merchandising</span>
+											<span class="flow-chip">Store Environment</span>
+											<span class="flow-chip">Supply Chain</span>
+										</div>
+										<span class="flow-arrow" aria-hidden="true"></span>
+										<div class="flow-node"><span class="icon solid fa-chart-bar" aria-hidden="true"></span>Readiness reporting<small>Gaps flagged before opening</small></div>
+										<span class="flow-arrow" aria-hidden="true"></span>
+										<div class="flow-node out"><span class="icon solid fa-store" aria-hidden="true"></span>Store opens<small>99% in stock</small></div>
+										<figcaption>Three teams, one shared picture of what&rsquo;s missing before the doors open.</figcaption>
+									</figure>
+									<h4>The problem</h4>
+									<p>Opening a new store requires coordination across Merchandising, Store Environment, and Supply Chain. Limited visibility into assortment readiness and inventory gaps created risk that stores would open with missing products and incomplete assortments.</p>
+									<p>At the time, new stores were opening with an average of more than 2,000 out-of-stock SKUs.</p>
+									<h4>What I did</h4>
+									<p class="point"><b>Built visibility into the problem.</b> I designed reporting, analytics, and communication processes that surfaced assortment readiness, inventory risks, and execution gaps before stores opened, enabling teams to take action earlier.</p>
+									<p class="point"><b>Connected teams and processes.</b> I coordinated efforts across Merchandising, Store Environment, and Supply Chain, ensuring issues were identified early and ownership was clear.</p>
+									<p class="point"><b>Created a feedback loop.</b> I worked closely with merchant teams to understand recurring challenges, improve engagement with the new-store process, and continuously refine reporting based on user needs.</p>
+									<h4>The challenge</h4>
+									<p>The work required aligning multiple organizations with different priorities and timelines while maintaining visibility into thousands of products moving through the opening process.</p>
+									<h4>The impact</h4>
+									<p>New-store in-stock performance improved to 99%, while out-of-stock SKUs at opening fell significantly from prior store openings.</p>
+									<p>The reporting and communication processes became core operating tools for new-store teams, helping drive consistent in-stock performance while improving visibility, accountability, and execution across future store openings.</p>
+									<a class="back-to-cards" href="#project-cards">&uarr; Back to all projects</a>
 								</article>
 
-								<article class="project flip">
-									<div class="project-visual" style="--pc: #6aa9d6; --pt: #eaf4fb; --pd: #2f6f9f;">
-										<span class="icon solid fa-life-ring"></span>
-										<ul class="project-stats">
-											<li><strong>300+</strong><span>merchandising associates supported</span></li>
-										</ul>
-									</div>
-									<div class="project-body">
-										<span class="eyebrow">Senior Business Analyst</span>
-										<h3>Merchandising Support Hub</h3>
-										<p class="project-lead">A one-stop shop for training, support, and development resources across the merchandising organization.</p>
-										<h4>The problem</h4>
-										<p>The merchandising community (Senior Merchants, Merchants, Associate Merchants, Merchandise Planners, and others) depended on a wide range of tools and processes, but the training, support, and development resources behind them were scattered across multiple locations.</p>
-										<p>As a result, associates spent unnecessary time searching for answers, onboarding experiences varied, and valuable knowledge often wasn&rsquo;t easily accessible.</p>
-										<h4>What I did</h4>
-										
-										<p class="point"><b>Built the one-stop shop.</b> I architected and managed a centralized SharePoint hub that brought together training, support, and development resources for the merchandising community. I created original content, established processes for reviewing and publishing cross-functional resources, and continuously improved the experience based on user feedback and evolving business needs.</p>
-										<p class="point"><b>Brought it to the users.</b> I attended department meetings, demonstrated available resources, gathered user feedback, and continuously evolved the experience based on team needs.</p>
-										<p class="point"><b>Standardized onboarding and enablement.</b> I supported onboarding for 3+ cohorts annually and helped create repeatable training and support processes so every new associate started from the same foundation.</p>
-										<h4>The impact</h4>
-										<p>More than 300 merchandising associates gained a single destination for training, support, and development resources.</p>
-										<p>The hub strengthened onboarding, improved tool adoption, supported change management efforts, and reduced time spent searching for answers across the organization.</p>
-									</div>
+								<article class="project" id="p-hub">
+									<span class="eyebrow">Senior Business Analyst</span>
+									<h3>Merchandising Support Hub</h3>
+									<p class="project-lead">A one-stop shop for training, support, and development resources across the merchandising organization.</p>
+									<p class="outcome"><b>Outcome:</b> 300+ merchandising associates got one place for training, support, and development, with more consistent onboarding.</p>
+									<ul class="stat-row">
+										<li><strong>300+</strong><span>merchandising associates supported</span></li>
+										<li><strong>3+</strong><span>onboarding cohorts supported each year</span></li>
+									</ul>
+									<figure class="flow" aria-label="Diagram: scattered resources become one hub for 300+ associates">
+										<div class="flow-col scattered">
+											<span class="flow-chip"><span class="icon solid fa-file-alt" aria-hidden="true"></span> Training</span>
+											<span class="flow-chip"><span class="icon solid fa-question-circle" aria-hidden="true"></span> Support</span>
+											<span class="flow-chip"><span class="icon solid fa-seedling" aria-hidden="true"></span> Development</span>
+										</div>
+										<span class="flow-arrow" aria-hidden="true"></span>
+										<div class="flow-node"><span class="icon solid fa-life-ring" aria-hidden="true"></span>One hub<small>Curated and kept current</small></div>
+										<span class="flow-arrow" aria-hidden="true"></span>
+										<div class="flow-node out"><span class="icon solid fa-users" aria-hidden="true"></span>300+ associates<small>Same starting point</small></div>
+										<figcaption>Before: answers scattered across many places. After: one destination.</figcaption>
+									</figure>
+									<h4>The problem</h4>
+									<p>The merchandising community (Senior Merchants, Merchants, Associate Merchants, Merchandise Planners, and others) depended on a wide range of tools and processes, but the training, support, and development resources behind them were scattered across multiple locations.</p>
+									<p>As a result, associates spent unnecessary time searching for answers, onboarding experiences varied, and valuable knowledge often wasn&rsquo;t easily accessible.</p>
+									<h4>What I did</h4>
+									<p class="point"><b>Built the one-stop shop.</b> I architected and managed a centralized SharePoint hub that brought together training, support, and development resources for the merchandising community. I created original content, established processes for reviewing and publishing cross-functional resources, and continuously improved the experience based on user feedback and evolving business needs.</p>
+									<p class="point"><b>Brought it to the users.</b> I attended department meetings, demonstrated available resources, gathered user feedback, and continuously evolved the experience based on team needs.</p>
+									<p class="point"><b>Standardized onboarding and enablement.</b> I supported onboarding for 3+ cohorts annually and helped create repeatable training and support processes so every new associate started from the same foundation.</p>
+									<h4>The impact</h4>
+									<p>More than 300 merchandising associates gained a single destination for training, support, and development resources.</p>
+									<p>The hub strengthened onboarding, improved tool adoption, supported change management efforts, and reduced time spent searching for answers across the organization.</p>
+									<a class="back-to-cards" href="#project-cards">&uarr; Back to all projects</a>
 								</article>
 							</section>
 
@@ -617,7 +747,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/tabs.js?v=2"></script>
+			<script src="assets/js/tabs.js?v=3"></script>
 
 	</body>
 </html>
