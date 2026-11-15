@@ -165,8 +165,24 @@
 			.features li .result { color: var(--ink); }
 			body { background-attachment: fixed; min-height: 100vh; }
 			/* LinkedIn link at the top of About */
-			.about ul.actions.top-links { margin: -0.5em 0 2em 0; padding: 0; }
+			.about ul.actions.top-links { margin: 0; padding: 0; gap: 0.75em; }
 			.about ul.actions.top-links li { padding: 0; }
+			/* About: quick-read hero (text + photo side by side) */
+			.hero { display: grid; grid-template-columns: minmax(0, 1fr) 36%; gap: 3em; align-items: start; margin-bottom: 3em; }
+			.hero-photo { width: 100%; border-radius: 0.5em; box-shadow: 0 4px 18px rgba(0,0,0,0.12); display: block; }
+			.hero .lead { margin-bottom: 1.25em; }
+			.quick-facts { list-style: none; padding: 0 !important; margin: 0 0 1.75em 0; overflow: visible !important; }
+			.quick-facts li { display: flex; gap: 0.9em; align-items: flex-start; padding: 0.85em 0; border-top: solid 1px #eeeeee; }
+			.quick-facts li:last-child { border-bottom: solid 1px #eeeeee; }
+			.quick-facts .qf-icon { flex: none; width: 2.2em; height: 2.2em; border-radius: 50%; background: #f0eef8; color: var(--accent); display: inline-flex; align-items: center; justify-content: center; font-size: 0.9em; margin-top: 0.15em; }
+			.quick-facts .qf-icon:before { line-height: 1; }
+			.quick-facts strong { display: block; line-height: 1.4; }
+			.quick-facts span { display: block; line-height: 1.55; }
+			.about h3.longer { font-size: 1.35em; padding-top: 2em; border-top: solid 1px #dddddd; margin-bottom: 0.8em; }
+			@media screen and (max-width: 980px) {
+				.hero { grid-template-columns: 1fr; gap: 1.75em; }
+				.hero-photo { order: -1; max-width: 340px; }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -194,18 +210,39 @@
 									<h2>Oh, hello! I'm Elizabeth.</h2>
 								</header>
 
-								<img class="photo right" src="images/elizabeth.jpg" alt="Elizabeth smiling in front of a colorful geometric mural" />
+								<div class="hero">
+									<div class="hero-text">
+										<p class="lead">I'm a product manager who spends most of her time making complex work a little simpler.</p>
 
-								<p class="lead">I spend most of my time figuring out how to make complex work a little simpler.</p>
-								<ul class="actions fixed btn-row top-links">
-									<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
-								</ul>
-								<p>Today, I'm a Product Manager building products and agentic workflows that help merchandising teams make better assortment and space planning decisions. My focus is identifying complex business challenges, uncovering user needs, and delivering scalable solutions that improve both operational efficiency and customer outcomes.</p>
-								<p>What's unique about my perspective is that I've worked across nearly every stage of the merchandising lifecycle. I've run retail store departments, managed strategy for a billion-dollar product category as a Merchandise Planner, led training and enablement efforts for merchandising teams, and now build the software those teams use every day.</p>
-								<p>That experience taught me an important lesson: the best products aren't the ones with the most features. They're the ones that make someone's job noticeably easier.</p>
-								<p>Currently, I partner with users, engineers, designers, data scientists, and business leaders to turn complex operational challenges into solutions that create real value and save people time. I'm particularly passionate about customer-centric product strategy, AI, change management, and building products people actually want to use.</p>
-								<p>As AI continues to reshape the way we work, I'm excited by opportunities to help teams work smarter, not harder. Whether that's through agentic workflows, decision-support tools, or process automation, I enjoy finding practical ways to apply AI that create meaningful value instead of technology for technology's sake.</p>
-								<p>Ultimately, I enjoy translating ambiguity into strategy, aligning cross-functional partners around a shared vision, and shipping products that drive measurable adoption and business value.</p>
+										<ul class="quick-facts">
+											<li>
+												<span class="qf-icon icon solid fa-tools" aria-hidden="true"></span>
+												<div><strong>What I do</strong>
+												<span>Build products and AI-powered workflows that make someone's job noticeably easier.</span></div>
+											</li>
+											<li>
+												<span class="qf-icon icon solid fa-route" aria-hidden="true"></span>
+												<div><strong>Why I'm a little different</strong>
+												<span>I've done the job before building for it: the sales floor, the planning desk, the training room, and now product.</span></div>
+											</li>
+											<li>
+												<span class="qf-icon icon solid fa-cat" aria-hidden="true"></span>
+												<div><strong>What to expect</strong>
+												<span>Clear thinking, honest tradeoffs, and the occasional cat reference.</span></div>
+											</li>
+										</ul>
+
+										<ul class="actions fixed btn-row top-links">
+											<li><a href="#work" class="button primary small icon solid fa-arrow-right">See my work</a></li>
+											<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
+										</ul>
+									</div>
+									<img class="hero-photo" src="images/elizabeth.jpg" alt="Elizabeth smiling in front of a colorful geometric mural" />
+								</div>
+
+								<h3 class="longer">The longer version</h3>
+								<p>I've seen retail from nearly every side. I've run store departments, managed strategy for a billion-dollar product category, trained the teams who use the tools, and now I build those tools. Along the way I learned that the best products aren't the ones with the most features. They're the ones that make someone's job noticeably easier.</p>
+								<p>These days, that means a lot of AI. I like finding the practical, unglamorous places where it actually helps, rather than technology for technology's sake. I'm happiest turning a fuzzy problem into a clear plan, getting very different people pointed the same direction, and shipping something people genuinely want to use.</p>
 
 								<h3 class="free-time">How I Spend My Free Time</h3>
 
