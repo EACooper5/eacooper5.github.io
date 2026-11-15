@@ -133,6 +133,40 @@
 				#nav ul li a { font-size: 0.85em; padding: 0 0.7em; height: 2.4em; line-height: 2.4em; }
 			}
 			.features li .result { display: block; margin-top: 0.75em; font-weight: 600; color: #636363; }
+
+			/* Readability + one accent color */
+			:root { --accent: #5f4d93; --accent-dark: #4c3d7a; --ink: #2b2b2b; --body: #3d3d3d; --muted: #5c5c5c; }
+			#main { color: var(--body); }
+			#main p, #main li, #main dd { font-weight: 400; }
+			#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 { color: var(--ink); font-weight: 600; }
+			#main strong, #main b { color: var(--ink); font-weight: 600; }
+			#main a:hover { color: var(--accent); }
+			#main header.major h2:after { background-image: none; background-color: var(--accent); }
+			#main .button { font-weight: 600; color: var(--ink) !important; box-shadow: inset 0 0 0 1px #c4c4c4; }
+			#main .button.icon:before { color: var(--accent) !important; }
+			#main .button.primary { background-color: var(--accent); color: #ffffff !important; box-shadow: none; }
+			#main .button.primary:hover { background-color: var(--accent-dark); }
+			#main .button.primary.icon:before { color: #ffffff !important; }
+			.about .lead { color: var(--ink); font-weight: 400; }
+			.about h4 { color: var(--body); }
+			.job .when { font-style: normal; color: var(--muted); font-size: 0.95em; }
+			.career-intro, .project-lead { font-style: normal; color: var(--muted); }
+			.project-body .eyebrow { color: var(--accent); }
+			.project-body h4 { color: var(--ink); }
+			.project-body p.point b { color: var(--ink); }
+			.project-stats strong { color: var(--ink) !important; }
+			.project-stats span { color: var(--muted); font-size: 0.85em; }
+			.project-visual { --pc: var(--accent) !important; }
+			#skills .sk-col { --c: var(--accent); }
+			.sk-col h4 { color: var(--ink) !important; }
+			.sk-col .sk-sub { font-style: normal; color: var(--muted); font-size: 0.85em; }
+			.sk-group { color: var(--ink); }
+			.sk-group .icon { color: var(--accent); }
+			.features li .result { color: var(--ink); }
+			body { background-attachment: fixed; min-height: 100vh; }
+			/* LinkedIn link at the top of About */
+			.about ul.actions.top-links { margin: -0.5em 0 2em 0; padding: 0; }
+			.about ul.actions.top-links li { padding: 0; }
 		</style>
 	</head>
 	<body class="is-preload">
@@ -163,16 +197,15 @@
 								<img class="photo right" src="images/elizabeth.jpg" alt="Elizabeth smiling in front of a colorful geometric mural" />
 
 								<p class="lead">I spend most of my time figuring out how to make complex work a little simpler.</p>
+								<ul class="actions fixed btn-row top-links">
+									<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
+								</ul>
 								<p>Today, I'm a Product Manager building products and agentic workflows that help merchandising teams make better assortment and space planning decisions. My focus is identifying complex business challenges, uncovering user needs, and delivering scalable solutions that improve both operational efficiency and customer outcomes.</p>
 								<p>What's unique about my perspective is that I've worked across nearly every stage of the merchandising lifecycle. I've run retail store departments, managed strategy for a billion-dollar product category as a Merchandise Planner, led training and enablement efforts for merchandising teams, and now build the software those teams use every day.</p>
 								<p>That experience taught me an important lesson: the best products aren't the ones with the most features. They're the ones that make someone's job noticeably easier.</p>
 								<p>Currently, I partner with users, engineers, designers, data scientists, and business leaders to turn complex operational challenges into solutions that create real value and save people time. I'm particularly passionate about customer-centric product strategy, AI, change management, and building products people actually want to use.</p>
 								<p>As AI continues to reshape the way we work, I'm excited by opportunities to help teams work smarter, not harder. Whether that's through agentic workflows, decision-support tools, or process automation, I enjoy finding practical ways to apply AI that create meaningful value instead of technology for technology's sake.</p>
 								<p>Ultimately, I enjoy translating ambiguity into strategy, aligning cross-functional partners around a shared vision, and shipping products that drive measurable adoption and business value.</p>
-
-								<ul class="actions fixed btn-row">
-									<li><a href="https://www.linkedin.com/in/elizabethacooper5" class="button small icon brands fa-linkedin-in" target="_blank" rel="noopener">LinkedIn</a></li>
-								</ul>
 
 								<h3 class="free-time">How I Spend My Free Time</h3>
 
