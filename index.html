@@ -180,9 +180,10 @@
 			/* One-line result under the title */
 			#main .outcome { background: #f4f2fa; border-left: solid 4px var(--accent); border-radius: 0 0.4em 0.4em 0; padding: 0.8em 1.1em; color: var(--ink); margin-bottom: 1.75em !important; }
 			/* Stats: full-width row */
-			.stat-row { list-style: none; padding: 0 !important; margin: 0 0 2em 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(10em, 1fr)); border: solid 1px #e6e6e6; border-radius: 0.6em; }
+			.stat-row { list-style: none; padding: 0 !important; margin: 0 0 2em 0; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: solid 1px #e6e6e6; border-radius: 0.6em; }
 			.stat-row li { padding: 1em 1.25em; border-left: solid 1px #e6e6e6; }
 			.stat-row li:first-child { border-left: 0; }
+			@media screen and (max-width: 560px) { .stat-row { grid-auto-flow: row; } .stat-row li { border-left: 0; border-top: solid 1px #e6e6e6; } .stat-row li:first-child { border-top: 0; } }
 			.stat-row strong { display: block; font-size: 1.7em; line-height: 1.15; color: var(--ink) !important; }
 			.stat-row span { display: block; font-size: 0.85em; line-height: 1.4; color: var(--muted); margin-top: 0.25em; }
 			/* Simple workflow diagram */
