@@ -15,10 +15,8 @@
 			$sections.hide().filter('#' + id).show();
 			$links.removeClass('active active-locked')
 				.filter('[href="#' + id + '"]').addClass('active');
-			if (scroll) {
-				var top = $nav.offset().top;
-				if ($(window).scrollTop() > top) $('html, body').scrollTop(top);
-			}
+			// Every tab opens at the very top of the page.
+			if (scroll) window.scrollTo(0, 0);
 		}
 
 		// Any link to a section (tabs, "Get in Touch", etc.) switches tabs.

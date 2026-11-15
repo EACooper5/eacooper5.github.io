@@ -167,6 +167,14 @@
 			/* LinkedIn link at the top of About */
 			.about ul.actions.top-links { margin: 0; padding: 0; }
 			.about ul.actions.top-links li { padding: 0; }
+			/* About: button to the Projects tab, with a tooltip */
+			.about ul.actions.work-link { margin: 0.5em 0 0 0; padding: 0; }
+			.about ul.actions.work-link li { padding: 0; position: relative; }
+			.has-tip { position: relative; }
+			.has-tip:after { content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translate(-50%, 4px); background: var(--ink); color: #ffffff; font-size: 0.8em; font-weight: 400; line-height: 1.3; padding: 0.55em 0.9em; border-radius: 6px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.15s ease, transform 0.15s ease; }
+			.has-tip:before { transition: none; }
+			.has-tip:hover:after, .has-tip:focus-visible:after { opacity: 1; transform: translate(-50%, 0); }
+			.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 			/* About: intro beside the photo */
 			.hero { display: grid; grid-template-columns: minmax(0, 1fr) 36%; gap: 3em; align-items: center; margin-bottom: 3em; }
 			.hero-photo { width: 100%; border-radius: 0.5em; box-shadow: 0 4px 18px rgba(0,0,0,0.12); display: block; }
@@ -237,8 +245,12 @@
 								</div>
 
 								<p>Today, I'm a Product Manager focused on helping teams make better decisions and spend less time fighting complicated processes. I enjoy untangling messy problems, understanding what people actually need, and building solutions that make work feel a little easier.</p>
-								<p>My path here has been a bit unconventional. I've worked in store, managed strategy and planning, supported teams through change, and analyzed how businesses operate. Seeing the same problems from so many different angles gives me a practical perspective on product development and helps me build solutions that work in the real world, not just on a roadmap.</p>
+								<p>My path here has been a bit unconventional. I've worked in store, managed strategy and execution, supported teams through change, and analyzed how businesses operate. Seeing the same problems from so many different angles gives me a practical perspective on product development and helps me build solutions that work in the real world, not just on a roadmap.</p>
 								<p>I'm especially interested in how AI can reduce complexity and support better decision-making. The most exciting use cases aren't the flashiest ones. They're the ones that save people time, remove friction, and let them focus on the parts of their job that require human judgment.</p>
+
+								<ul class="actions fixed btn-row work-link">
+									<li><a href="#work" class="button primary icon solid fa-arrow-right has-tip" data-tip="Learn more about my work here" aria-describedby="work-tip">See My Work</a><span id="work-tip" class="sr-only">Learn more about my work here</span></li>
+								</ul>
 
 								<h3 class="free-time">How I Spend My Free Time</h3>
 
@@ -605,7 +617,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/tabs.js"></script>
+			<script src="assets/js/tabs.js?v=2"></script>
 
 	</body>
 </html>
